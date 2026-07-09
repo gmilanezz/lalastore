@@ -1,0 +1,75 @@
+<main>
+  <section class="product-detail" *ngIf="product as item; else notFound">
+    <div class="gallery">
+      <div class="main-image">
+        <img [src]="selectedImage" [alt]="item.name">
+      </div>
+
+      <div class="thumbs" *ngIf="item.images.length > 1">
+        <button
+          type="button"
+          *ngFor="let image of item.images"
+          [ngClass]="{ active: selectedImage === image }"
+          (click)="selectedImage = image"
+        >
+          <img [src]="image" [alt]="item.name">
+        </button>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <a [routerLink]="['/catalogo', item.brand.toLowerCase(), item.catalog]" class="back-link">← Voltar ao catálogo</a>
+      <span class="product-code">{{ item.code }}</span>
+      <h1>{{ item.name }}</h1>
+      <p class="price">{{ item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</p>
+      <p class="description">{{ item.description }}</p>
+
+      <p class="composition" *ngIf="item.composition">
+        <strong>Composição:</strong> {{ item.composition }}
+      </p>
+
+      <div class="form-group">
+        <label>Cor</label>
+        <div class="options">
+          <button
+            type="button"
+            *ngFor="let color of item.colors"
+            [ngClass]="{ active: selectedColor === color.name }"
+            (click)="selectedColor = color.name"
+          >
+            <span class="color-dot" [style.background]="color.hex || '#ddd'"></span>
+            {{ color.name }}
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Tamanho</label>
+        <div class="options">
+          <button
+            type="button"
+            *ngFor="let size of item.sizes"
+            [ngClass]="{ active: selectedSize === size }"
+            (click)="selectedSize = size"
+          >
+            {{ size }}
+          </button>
+        </div>
+      </div>
+
+      <button class="btn-add-cart" type="button" (click)="addToCart()">
+        Adicionar à Sacola
+      </button>
+
+      <p class="feedback" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
+    </div>
+  </section>
+
+  <ng-template #notFound>
+    <section class="not-found">
+      <h1>Produto não encontrado</h1>
+      <p>O produto pode ter sido removido ou ainda não foi cadastrado.</p>
+      <a routerLink="/">Voltar para o início</a>
+    </section>
+  </ng-template>
+</main>

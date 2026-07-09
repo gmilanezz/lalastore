@@ -1,0 +1,119 @@
+<header class="site-header">
+  <div class="header-container">
+    <a class="logo" routerLink="/" aria-label="Ir para a página inicial" (click)="closeMobileMenu()">
+      <img src="assets/index/logo.jpeg" alt="Lala Store VIP" id="logo-img">
+    </a>
+
+    <nav class="desktop-menu" aria-label="Menu principal">
+      <ul>
+        <li class="dropdown">
+          <span>Esmeralda</span>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/esmeralda/catalogo1" routerLinkActive="active-link">Catálogo 1</a></li>
+            <li><a routerLink="/catalogo/esmeralda/catalogo2" routerLinkActive="active-link">Catálogo 2</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <span>Kaele</span>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/kaele/catalogo1" routerLinkActive="active-link">Catálogo 1</a></li>
+            <li><a routerLink="/catalogo/kaele/catalogo2" routerLinkActive="active-link">Catálogo 2</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <span>Mysk</span>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/mysk/catalogo1" routerLinkActive="active-link">Catálogo 1</a></li>
+            <li><a routerLink="/catalogo/mysk/catalogo2" routerLinkActive="active-link">Catálogo 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="hamburger" type="button" aria-label="Abrir menu" (click)="toggleMobileMenu($event)">
+        <span></span>
+      </button>
+
+      <a class="cart-btn" routerLink="/carrinho" aria-label="Abrir sacola" title="Sacola" (click)="closeMobileMenu()">
+        <svg class="cart-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M17 22C17.5523 22 18 21.5523 18 21C18 20.4477 17.5523 20 17 20C16.4477 20 16 20.4477 16 21C16 21.5523 16.4477 22 17 22Z" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M3 3H6L8.5 17H19L21 7H7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <span class="cart-count" *ngIf="cartService.totalItems > 0">
+          {{ cartService.totalItems }}
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <button
+    class="mobile-backdrop"
+    type="button"
+    aria-label="Fechar menu"
+    *ngIf="isMobileMenuOpen"
+    (click)="closeMobileMenu()"
+  ></button>
+
+  <nav
+    class="mobile-menu"
+    [ngClass]="{ active: isMobileMenuOpen }"
+    aria-label="Menu mobile"
+    (click)="$event.stopPropagation()"
+  >
+    <ul class="menu-list">
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'esmeralda' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('esmeralda')">
+          Esmeralda
+        </button>
+
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/esmeralda/catalogo1" (click)="closeMobileMenu()">Catálogo 1</a></li>
+          <li><a routerLink="/catalogo/esmeralda/catalogo2" (click)="closeMobileMenu()">Catálogo 2</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'kaele' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('kaele')">
+          Kaele
+        </button>
+
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/kaele/catalogo1" (click)="closeMobileMenu()">Catálogo Verão</a></li>
+          <li><a routerLink="/catalogo/kaele/catalogo2" (click)="closeMobileMenu()">Catálogo Inverno</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'mysk' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('mysk')">
+          Mysk
+        </button>
+
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/mysk/catalogo1" (click)="closeMobileMenu()">Lançamentos</a></li>
+          <li><a routerLink="/catalogo/mysk/catalogo2" (click)="closeMobileMenu()">Promoções</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-link" href="#quem-somos" (click)="closeMobileMenu()">Sobre</a>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Perguntas Frequentes</a>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Política de Devolução</a>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Contato</a>
+      </li>
+    </ul>
+  </nav>
+</header>

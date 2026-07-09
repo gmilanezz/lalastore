@@ -1,0 +1,53 @@
+<main class="cart-page">
+  <section class="cart-header">
+    <h1>Sacola</h1>
+  </section>
+
+  <section class="cart-layout" *ngIf="items.length > 0; else emptyCart">
+    <div class="cart-items">
+      <article class="cart-item" *ngFor="let item of items; let index = index">
+        <img [src]="item.product.images[0]" [alt]="item.product.name">
+
+        <div class="cart-info">
+          <h2>{{ item.product.name }}</h2>
+          <p>{{ item.product.code }}</p>
+          <p *ngIf="item.selectedColor">Cor: {{ item.selectedColor }}</p>
+          <p *ngIf="item.selectedSize">Tamanho: {{ item.selectedSize }}</p>
+          <strong>{{ item.product.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</strong>
+        </div>
+
+        <div class="quantity-controls">
+          <button type="button" (click)="updateQuantity(index, item.quantity - 1)">−</button>
+          <span>{{ item.quantity }}</span>
+          <button type="button" (click)="updateQuantity(index, item.quantity + 1)">+</button>
+        </div>
+
+        <button class="remove" type="button" (click)="removeItem(index)">Remover</button>
+      </article>
+    </div>
+
+    <div class="cart-summary-inline">
+      <p>
+        Itens:
+        {{ cartService.totalItems }}
+      </p>
+
+      <p class="cart-total">
+        Total:
+        {{ cartService.totalPrice | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+      </p>
+
+      <a class="checkout-whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+        Finalizar compra pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <ng-template #emptyCart>
+    <section class="empty-cart">
+      <h2>Sua sacola está vazia</h2>
+      <p>Experimente nossas peças e adicione-as na sacola!</p>
+      <a routerLink="/">Voltar Página Inicial</a>
+    </section>
+  </ng-template>
+</main>

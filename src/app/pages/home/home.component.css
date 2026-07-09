@@ -1,0 +1,392 @@
+.carousel-section {
+  background: #4A035F;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-container,
+.carousel-slide {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-slide {
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .9s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-slide img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.carousel-indicators {
+  bottom: 10px;
+  display: flex;
+  gap: 5px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.indicator {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 6px;
+  transition: all 0.3s;
+  width: 6px;
+}
+
+.indicator.active {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+.catalog-section {
+  background-color: white;
+  padding: 50px 5% 4.5% 5%;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: #4A035F;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.products-carousel {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track app-product-card {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  color: #4A035F;
+  cursor: pointer;
+  display: none;
+  font-size: 2.1rem;
+  height: 48px;
+  opacity: 0.75;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  width: 48px;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  color: #6B1A7E;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.prev {
+  left: -70px;
+}
+
+.next {
+  right: -70px;
+}
+
+.vip-cta {
+  background: linear-gradient(135deg, var(--primary-purple), var(--light-purple));
+  color: var(--text-light);
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.cta-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.cta-text {
+  max-width: 500px;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.cta-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.btn-whatsapp {
+  align-items: center;
+  background-color: #25D366;
+  border: 1px solid #F7E9CF;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 12px;
+  justify-content: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: all .35s ease;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp i {
+  font-size: 1.8rem;
+}
+
+.hero-carousel {
+  background: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 70px 0 24px;
+  width: 100%;
+}
+
+.hero-track {
+  animation: heroScroll 38s linear infinite;
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  will-change: transform;
+}
+
+.hero-track:hover {
+  animation-play-state: paused;
+}
+
+.hero-slide {
+  aspect-ratio: 9 / 16;
+  border-radius: 6px;
+  display: block;
+  flex: 0 0 auto;
+  overflow: hidden;
+  width: 340px;
+}
+
+.hero-slide img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+  width: 100%;
+}
+
+.hero-slide:hover img {
+  transform: scale(1.03);
+}
+
+@keyframes heroScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.about-brand {
+  background: #fff;
+  padding: 20px 30px;
+}
+
+.about-brand-content {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.about-logo {
+  width: 220px;
+}
+
+.about-brand p {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 760px;
+}
+
+.info-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.accordion {
+  margin: auto;
+  max-width: 1600px;
+}
+
+.accordion-item {
+  background: #fff;
+  border: 1.5px solid #F7E9CF;
+  overflow: hidden;
+  transition: .35s;
+}
+
+.accordion-btn {
+  align-items: center;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+
+.accordion-btn span {
+  color: #4A035F;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.icon {
+  fill: none;
+  height: 32px;
+  stroke: #D8A956;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: .35s;
+  width: 32px;
+}
+
+.accordion-content {
+  background: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+
+.accordion-content p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 0 42px 30px;
+}
+
+.accordion-content a {
+  color: #666;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 250px;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 769px) {
+  .carousel-arrow {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  } .prev{
+    left: -45px;
+  } .next{
+    right: -45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+    height: 380px;
+  }
+
+  .products-carousel {
+    padding: 0 10px;
+  }
+
+  .carousel-track {
+    padding-bottom: 20px;
+  }
+
+  .carousel-track app-product-card {
+    width: 280px;
+  }
+
+  .hero-carousel {
+    padding: 50px 0;
+  }
+
+  .hero-track {
+    gap: 0;
+  }
+
+  .hero-slide {
+    border-radius: 0;
+    width: 100vw;
+  }
+
+  .about-brand p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-section {
+    height: 460px;
+  }
+}

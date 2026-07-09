@@ -1,0 +1,40 @@
+<main>
+  <section class="catalog-top">
+    <div class="catalog-top-inner">
+      <p class="breadcrumb"><a routerLink="/">início</a> &gt; {{ brand | titlecase }} &gt; {{ catalog }}</p>
+      <h1>{{ brand | titlecase }} - {{ catalog }}</h1>
+    </div>
+  </section>
+
+  <section class="filters" aria-label="Filtros do catálogo">
+    <label>
+      Buscar por nome, código ou marca
+      <input type="search" [(ngModel)]="searchTerm" (input)="applyFilters()" placeholder="Ex.: vestido, JH62131">
+    </label>
+
+    <label>
+      Categoria
+      <select [(ngModel)]="selectedCategory" (change)="applyFilters()">
+        <option value="">Todas</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </label>
+
+    <button type="button" (click)="clearFilters()">Limpar filtros</button>
+  </section>
+
+  <section class="catalog-grid" *ngIf="products.length > 0; else emptyCatalog">
+    <app-product-card
+      *ngFor="let product of products; trackBy: trackByProductId"
+      [product]="product"
+    />
+  </section>
+
+  <ng-template #emptyCatalog>
+    <section class="empty-state">
+      <h2>Nenhum produto encontrado</h2>
+      <p>Você pode cadastrar produtos para essa marca no painel admin ou alterar os filtros.</p>
+      <a routerLink="/admin">Ir para o admin</a>
+    </section>
+  </ng-template>
+</main>

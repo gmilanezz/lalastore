@@ -1,0 +1,13 @@
+<article class="product-card" *ngIf="product">
+  <a [routerLink]="['/produto', product.id]" class="image-link" [attr.aria-label]="'Ver detalhes de ' + product.name">
+    <img [src]="product.images[0]" [alt]="product.name" loading="lazy">
+  </a>
+
+  <div class="product-info">
+    <span class="product-code">{{ product.code }}</span>
+    <h3>{{ product.name }}</h3>
+    <p class="product-meta">{{ product.brand }} · {{ product.category }}</p>
+    <p class="price">{{ product.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</p>
+    <a [routerLink]="['/produto', product.id]" class="btn-ver-mais">Ver mais</a>
+  </div>
+</article>
