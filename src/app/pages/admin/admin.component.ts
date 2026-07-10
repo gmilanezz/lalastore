@@ -131,7 +131,7 @@ export class AdminComponent implements OnInit {
       code: '',
       name: '',
       slug: '',
-      brand: 'Esmeralda',
+      brand: 'Esmeral',
       catalog: 'catalogo1',
       category: 'Vestidos',
       price: 0,

@@ -7,10 +7,10 @@
     <nav class="desktop-menu" aria-label="Menu principal">
       <ul>
         <li class="dropdown">
-          <span>Esmeralda</span>
+          <span>Esmeral</span>
           <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/esmeralda/catalogo1" routerLinkActive="active-link">Catálogo 1</a></li>
-            <li><a routerLink="/catalogo/esmeralda/catalogo2" routerLinkActive="active-link">Catálogo 2</a></li>
+            <li><a routerLink="/catalogo/Esmeral/catalogo1" routerLinkActive="active-link">Catálogo 1</a></li>
+            <li><a routerLink="/catalogo/Esmeral/catalogo2" routerLinkActive="active-link">Catálogo 2</a></li>
           </ul>
         </li>
 
@@ -66,14 +66,14 @@
     (click)="$event.stopPropagation()"
   >
     <ul class="menu-list">
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'esmeralda' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('esmeralda')">
-          Esmeralda
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Esmeral' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Esmeral')">
+          Esmeral
         </button>
 
         <ul class="submenu">
-          <li><a routerLink="/catalogo/esmeralda/catalogo1" (click)="closeMobileMenu()">Catálogo 1</a></li>
-          <li><a routerLink="/catalogo/esmeralda/catalogo2" (click)="closeMobileMenu()">Catálogo 2</a></li>
+          <li><a routerLink="/catalogo/Esmeral/catalogo1" (click)="closeMobileMenu()">Catálogo 1</a></li>
+          <li><a routerLink="/catalogo/Esmeral/catalogo2" (click)="closeMobileMenu()">Catálogo 2</a></li>
         </ul>
       </li>
 
@@ -105,10 +105,6 @@
 
       <li class="menu-item">
         <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Perguntas Frequentes</a>
-      </li>
-
-      <li class="menu-item">
-        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Política de Devolução</a>
       </li>
 
       <li class="menu-item">
