@@ -1,6 +1,6 @@
 .carousel-section {
   background: #4A035F;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -91,6 +91,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
+  margin-top: -10px;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -344,9 +345,9 @@
     display: flex;
     justify-content: center;
   } .prev{
-    left: -45px;
+    left: -60px;
   } .next{
-    right: -45px;
+    right: -60px;
   }
 }
 
