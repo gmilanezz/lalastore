@@ -62,12 +62,11 @@ footer {
 .linkedin-programador {
   color: #ffffff;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .linkedin-programador:hover {
   color: #F7E9CF;
-  text-decoration: underline;
 }
 
 @media (max-width: 900px) {

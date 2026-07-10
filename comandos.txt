@@ -1,0 +1,4 @@
+C:\Users\ghmil\OneDrive\Documentos\lalastorevip\
+
+npm run build -- --configuration production --base-href /lalastore/
+npx angular-cli-ghpages --dir=dist/lalastorevip-angular/browser
