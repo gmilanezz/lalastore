@@ -1,5 +1,5 @@
 .cart-page {
-  padding: 3rem 5% 10rem;
+  padding: 3rem 5% 6rem;
 }
 
 .cart-header,
@@ -28,13 +28,11 @@
 
 .cart-item {
   align-items: center;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(74, 3, 95, 0.08);
+  background: transparent;
+  border: #4A035F;
   display: grid;
   gap: 1rem;
   grid-template-columns: 110px 1fr auto auto;
-  padding: 1rem;
 }
 
 .cart-item img {
