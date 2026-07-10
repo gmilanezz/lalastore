@@ -6,12 +6,8 @@
       </div>
 
       <div class="thumbs" *ngIf="item.images.length > 1">
-        <button
-          type="button"
-          *ngFor="let image of item.images"
-          [ngClass]="{ active: selectedImage === image }"
-          (click)="selectedImage = image"
-        >
+        <button type="button" *ngFor="let image of item.images" [ngClass]="{ active: selectedImage === image }"
+          (click)="selectedImage = image">
           <img [src]="image" [alt]="item.name">
         </button>
       </div>
@@ -31,12 +27,8 @@
       <div class="form-group">
         <label>Cor</label>
         <div class="options">
-          <button
-            type="button"
-            *ngFor="let color of item.colors"
-            [ngClass]="{ active: selectedColor === color.name }"
-            (click)="selectedColor = color.name"
-          >
+          <button type="button" *ngFor="let color of item.colors" [ngClass]="{ active: selectedColor === color.name }"
+            (click)="selectedColor = color.name">
             <span class="color-dot" [style.background]="color.hex || '#ddd'"></span>
             {{ color.name }}
           </button>
@@ -46,22 +38,16 @@
       <div class="form-group">
         <label>Tamanho</label>
         <div class="options">
-          <button
-            type="button"
-            *ngFor="let size of item.sizes"
-            [ngClass]="{ active: selectedSize === size }"
-            (click)="selectedSize = size"
-          >
+          <button type="button" *ngFor="let size of item.sizes" [ngClass]="{ active: selectedSize === size }"
+            (click)="selectedSize = size">
             {{ size }}
           </button>
         </div>
       </div>
 
-      <button class="btn-add-cart" type="button" (click)="addToCart()">
-        Adicionar à Sacola
+      <button class="btn-add-cart" type="button" [ngClass]="{ 'is-added': isAddedToCart }" (click)="addToCart()">
+        {{ isAddedToCart ? 'Adicionado à sacola' : 'Adicionar à Sacola' }}
       </button>
-
-      <p class="feedback" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
     </div>
   </section>
 

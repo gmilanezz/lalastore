@@ -1,4 +1,7 @@
 .product-detail {
+  --main-image-height: 680px;
+
+  align-items: start;
   display: grid;
   gap: 3rem;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
@@ -13,14 +16,15 @@
 }
 
 .main-image {
-  background: #f7f7f7;
   border-radius: 22px;
+  height: var(--main-image-height);
   overflow: hidden;
+  width: 100%;
 }
 
 .main-image img {
-  aspect-ratio: 3 / 4;
   display: block;
+  height: 100%;
   object-fit: cover;
   width: 100%;
 }
@@ -52,10 +56,15 @@
 }
 
 .product-info {
-  align-self: start;
   background: #fff;
   border-radius: 22px;
   box-shadow: 0 16px 36px rgba(74, 3, 95, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: var(--main-image-height);
+  justify-content: center;
+  overflow-y: auto;
   padding: 2rem;
 }
 
@@ -74,7 +83,7 @@
 
 .product-info h1 {
   color: var(--primary-purple);
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: 2rem;
   margin: 0.2rem 0 0.7rem;
 }
 
@@ -99,7 +108,7 @@
 
 .form-group label {
   color: var(--primary-purple);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .options {
@@ -132,29 +141,31 @@
   width: 16px;
 }
 
-.btn-add-cart,
-.not-found a {
+.btn-add-cart {
   background: var(--primary-purple);
   border: 0;
   border-radius: 999px;
   color: var(--text-light);
   cursor: pointer;
   display: inline-flex;
-  font-weight: 900;
+  font-size: 0.9rem;
+  font-weight: 500;
   justify-content: center;
   margin-top: 1rem;
   padding: 1rem 1.2rem;
   text-decoration: none;
+  transition: 0.3s ease;
   width: 100%;
 }
 
-.feedback {
-  background: #ecf8ef;
-  border-radius: 12px;
-  color: #1d6b34;
-  font-weight: 700;
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
+.btn-add-cart:hover {
+  filter: brightness(1.01);
+  transform: translateY(-1px);
+}
+
+.btn-add-cart.is-added {
+  background: #25D366;
+  color: #fff;
 }
 
 .not-found {
@@ -170,6 +181,15 @@
 
 @media (max-width: 850px) {
   .product-detail {
+    --main-image-height: clamp(420px, 120vw, 560px);
+    gap: 2rem;
     grid-template-columns: 1fr;
+    padding: 3rem 5%;
+  }
+
+  .product-info {
+    height: auto;
+    justify-content: flex-start;
+    overflow: visible;
   }
 }

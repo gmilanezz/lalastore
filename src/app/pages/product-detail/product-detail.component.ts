@@ -12,12 +12,15 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
+
 export class ProductDetailComponent implements OnInit {
   product?: Product;
   selectedImage = '';
   selectedColor = '';
   selectedSize = '';
-  feedbackMessage = '';
+  isAddedToCart = false;
+
+  private addToCartTimeout?: number;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -42,10 +45,15 @@ export class ProductDetailComponent implements OnInit {
     }
 
     this.cartService.addToCart(this.product, this.selectedColor, this.selectedSize);
-    this.feedbackMessage = 'Produto adicionado à sacola.';
 
-    window.setTimeout(() => {
-      this.feedbackMessage = '';
-    }, 2500);
+    this.isAddedToCart = true;
+
+    if (this.addToCartTimeout) {
+      window.clearTimeout(this.addToCartTimeout);
+    }
+
+    this.addToCartTimeout = window.setTimeout(() => {
+      this.isAddedToCart = false;
+    }, 2200);
   }
 }
