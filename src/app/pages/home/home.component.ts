@@ -20,9 +20,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   activeAccordion: string | null = null;
 
   readonly slides = [
-    { image: 'assets/index/desktop/teste1.jpg', alt: 'Lançamento moda feminina 1' },
-    { image: 'assets/index/desktop/teste2.jpg', alt: 'Lançamento moda feminina 2' },
-    { image: 'assets/index/desktop/teste3.jpg', alt: 'Lançamento moda feminina 3' }
+    { 
+      image: 'assets/index/desktop/teste1.jpg', 
+      alt: 'Lançamento moda feminina 1',
+      link: '/produto/1' 
+    },
+    { 
+      image: 'assets/index/desktop/teste2.jpg', 
+      alt: 'Lançamento moda feminina 2', 
+      link: '/produto/2'
+    },
+    { 
+      image: 'assets/index/desktop/teste3.jpg', 
+      alt: 'Lançamento moda feminina 3', 
+      link: '/produto/3'
+    }
   ];
 
   private readonly heroImages = [

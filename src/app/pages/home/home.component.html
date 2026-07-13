@@ -1,23 +1,16 @@
 <main>
   <section class="carousel-section" aria-label="Destaques da loja">
     <div class="carousel-container">
-      <div
-        class="carousel-slide"
-        *ngFor="let slide of slides; let index = index"
-        [ngClass]="{ active: activeSlide === index }"
-      >
+      <a class="carousel-slide" *ngFor="let slide of slides; let index = index"
+        [ngClass]="{ active: activeSlide === index }" [routerLink]="slide.link"
+        [attr.aria-label]="'Ver peça ' + slide.alt">
         <img [src]="slide.image" [alt]="slide.alt">
-      </div>
+      </a>
 
       <div class="carousel-indicators" aria-label="Controles do carrossel">
-        <button
-          type="button"
-          class="indicator"
-          *ngFor="let slide of slides; let index = index"
-          [ngClass]="{ active: activeSlide === index }"
-          [attr.aria-label]="'Ir para banner ' + (index + 1)"
-          (click)="goToSlide(index)"
-        ></button>
+        <button type="button" class="indicator" *ngFor="let slide of slides; let index = index"
+          [ngClass]="{ active: activeSlide === index }" [attr.aria-label]="'Ir para banner ' + (index + 1)"
+          (click)="goToSlide(index)"></button>
       </div>
     </div>
   </section>
@@ -29,28 +22,15 @@
     </div>
 
     <div class="products-carousel" id="products-carousel">
-      <button
-        class="carousel-arrow prev"
-        type="button"
-        aria-label="Voltar produtos"
-        (click)="scrollProducts('prev')"
-      >
+      <button class="carousel-arrow prev" type="button" aria-label="Voltar produtos" (click)="scrollProducts('prev')">
         ❮
       </button>
 
       <div class="carousel-track" #productTrack>
-        <app-product-card
-          *ngFor="let product of featuredProducts; trackBy: trackByProductId"
-          [product]="product"
-        />
+        <app-product-card *ngFor="let product of featuredProducts; trackBy: trackByProductId" [product]="product" />
       </div>
 
-      <button
-        class="carousel-arrow next"
-        type="button"
-        aria-label="Avançar produtos"
-        (click)="scrollProducts('next')"
-      >
+      <button class="carousel-arrow next" type="button" aria-label="Avançar produtos" (click)="scrollProducts('next')">
         ❯
       </button>
     </div>
@@ -62,7 +42,8 @@
         <h2>Quer ser uma das primeiras a saber tudo em primeira mão?</h2>
         <p>Receba ofertas exclusivas, lançamentos e descontos especiais diretamente no seu celular!</p>
 
-        <a class="btn-whatsapp" href="https://chat.whatsapp.com/K8JwCUEoTKnBaUl7yF53RG?s=cl&p=a&ilr=1" target="_blank" rel="noopener">
+        <a class="btn-whatsapp" href="https://chat.whatsapp.com/K8JwCUEoTKnBaUl7yF53RG?s=cl&p=a&ilr=1" target="_blank"
+          rel="noopener">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
           Entrar no Grupo VIP
         </a>
@@ -72,11 +53,8 @@
 
   <section class="hero-carousel" aria-label="Outras imagens do catálogo">
     <div class="hero-track">
-      <a
-        [routerLink]="['/catalogo', 'mysk', 'catalogo1']"
-        class="hero-slide"
-        *ngFor="let image of heroSlides; let index = index; trackBy: trackByHeroImage"
-      >
+      <a [routerLink]="['/catalogo', 'mysk', 'catalogo1']" class="hero-slide"
+        *ngFor="let image of heroSlides; let index = index; trackBy: trackByHeroImage">
         <img [src]="image" [alt]="'Imagem de catálogo ' + (index + 1)">
       </a>
     </div>
@@ -97,57 +75,57 @@
   </section>
 
   <section class="info-section" id="catalogos">
-  <div class="accordion">
-    <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'Esmeral' }">
-      <button class="accordion-btn" type="button" (click)="toggleAccordion('Esmeral')">
-        <span>Esmeral</span>
+    <div class="accordion">
+      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'Esmeral' }">
+        <button class="accordion-btn" type="button" (click)="toggleAccordion('Esmeral')">
+          <span>Esmeral</span>
 
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
 
-      <div class="accordion-content">
-        <p>
-          <a routerLink="/catalogo/Esmeral/catalogo1">Catálogo 1</a><br>
-          <a routerLink="/catalogo/Esmeral/catalogo2">Catálogo 2</a>
-        </p>
+        <div class="accordion-content">
+          <p>
+            <a routerLink="/catalogo/Esmeral/catalogo1">Catálogo 1</a><br>
+            <a routerLink="/catalogo/Esmeral/catalogo2">Catálogo 2</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'kaele' }">
+        <button class="accordion-btn" type="button" (click)="toggleAccordion('kaele')">
+          <span>Kaele</span>
+
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            <a routerLink="/catalogo/kaele/catalogo1">Catálogo Verão</a><br>
+            <a routerLink="/catalogo/kaele/catalogo2">Catálogo Inverno</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'mysk' }">
+        <button class="accordion-btn" type="button" (click)="toggleAccordion('mysk')">
+          <span>Mysk</span>
+
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+
+        <div class="accordion-content">
+          <p>
+            <a routerLink="/catalogo/mysk/catalogo1">Lançamentos</a><br>
+            <a routerLink="/catalogo/mysk/catalogo2">Promoções</a>
+          </p>
+        </div>
       </div>
     </div>
-
-    <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'kaele' }">
-      <button class="accordion-btn" type="button" (click)="toggleAccordion('kaele')">
-        <span>Kaele</span>
-
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
-
-      <div class="accordion-content">
-        <p>
-          <a routerLink="/catalogo/kaele/catalogo1">Catálogo Verão</a><br>
-          <a routerLink="/catalogo/kaele/catalogo2">Catálogo Inverno</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'mysk' }">
-      <button class="accordion-btn" type="button" (click)="toggleAccordion('mysk')">
-        <span>Mysk</span>
-
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
-
-      <div class="accordion-content">
-        <p>
-          <a routerLink="/catalogo/mysk/catalogo1">Lançamentos</a><br>
-          <a routerLink="/catalogo/mysk/catalogo2">Promoções</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </main>

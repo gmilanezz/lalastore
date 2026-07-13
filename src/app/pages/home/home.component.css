@@ -1,6 +1,6 @@
 .carousel-section {
   background: #4A035F;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -78,8 +78,10 @@
 
 .products-carousel {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1500px;
+  padding: 0 48px;
   position: relative;
+  width: 100%;
 }
 
 .carousel-track {
