@@ -21,9 +21,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   readonly slides = [
     { 
-      image: 'assets/index/desktop/teste1.jpg', 
-      alt: 'Lançamento moda feminina 1',
-      link: '/produto/1' 
+      image: 'assets/maisum/teste1.jpg', 
+      alt: 'Catálogo Summer Preview',
+      link: '/catalogo/maisum/summerpreview' 
     },
     { 
       image: 'assets/index/desktop/teste2.jpg', 

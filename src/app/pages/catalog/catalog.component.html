@@ -1,7 +1,12 @@
 <main>
   <section class="catalog-top">
     <div class="catalog-top-inner">
-      <p class="breadcrumb"><a routerLink="/">início</a> &gt; {{ brand | titlecase }} &gt; {{ catalog }}</p>
+      <p class="breadcrumb">
+        <button type="button" class="breadcrumb-link" (click)="goToPreviousPage()">
+          Voltar
+        </button>
+        &gt; {{ brand | titlecase }} &gt; {{ catalog }}
+      </p>
       <h1>{{ brand | titlecase }} - {{ catalog }}</h1>
     </div>
   </section>
@@ -24,10 +29,7 @@
   </section>
 
   <section class="catalog-grid" *ngIf="products.length > 0; else emptyCatalog">
-    <app-product-card
-      *ngFor="let product of products; trackBy: trackByProductId"
-      [product]="product"
-    />
+    <app-product-card *ngFor="let product of products; trackBy: trackByProductId" [product]="product" />
   </section>
 
   <ng-template #emptyCatalog>

@@ -1,3 +1,17 @@
+.breadcrumb-link {
+  background: none;
+  border: 0;
+  color: #4A035F;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
 .policy-page {
   background: #fff;
   color: #222;

@@ -4,6 +4,26 @@
   min-height: 70vh;
 }
 
+.breadcrumb {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-link {
+  background: none;
+  border: 0;
+  color: #4A035F;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
 .policy-content {
   margin: 0 auto;
   max-width: 900px;
@@ -35,12 +55,6 @@
 .policy-content ul {
   margin: 12px 0 0;
   padding-left: 24px;
-}
-
-.policy-content a {
-  color: #4A035F;
-  font-weight: 600;
-  text-decoration: none;
 }
 
 .policy-content a:hover {

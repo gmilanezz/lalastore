@@ -22,11 +22,11 @@
   cursor: pointer;
   font: inherit;
   padding: 0;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-.breadcrumb-link:hover {
-  color: #6B1A7E;
+.breadcrumb-link:hover{
+  text-decoration: underline;
 }
 
 .cart-header h1,
