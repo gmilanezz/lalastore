@@ -248,7 +248,7 @@
 
 .about-brand {
   background: #fff;
-  padding: 15px 30px;
+  padding: 15px 30px 30px;
 }
 
 .about-brand-content {
@@ -267,6 +267,7 @@
   font-weight: 300;
   line-height: 1.8;
   max-width: 760px;
+  margin-top: -20px;
 }
 
 .info-section {
@@ -385,6 +386,7 @@
 
   .about-brand p {
     font-size: 1.05rem;
+    margin-top: -25px;
   }
 }
 

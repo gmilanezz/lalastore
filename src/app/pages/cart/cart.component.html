@@ -1,5 +1,11 @@
 <main class="cart-page">
   <section class="cart-header">
+    <p class="breadcrumb">
+      <button type="button" class="breadcrumb-link" (click)="goToPreviousPage()">
+        Voltar
+      </button>
+      &gt; Sacola
+    </p>
     <h1>Sacola</h1>
   </section>
 
@@ -37,7 +43,7 @@
         {{ cartService.totalPrice | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
       </p>
 
-      <a class="checkout-whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+      <a class="checkout-whatsapp" [href]="checkoutWhatsappUrl" target="_blank" rel="noopener">
         Finalizar compra pelo WhatsApp
       </a>
     </div>
