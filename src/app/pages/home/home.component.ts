@@ -21,30 +21,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   readonly slides = [
     { 
-      image: 'assets/maisum/teste1.jpg', 
+      image: 'assets/index/desktop/topmalhadesktop.jpg', 
       alt: 'Catálogo Summer Preview',
       link: '/catalogo/maisum/summerpreview' 
     },
     { 
-      image: 'assets/index/desktop/teste2.jpg', 
+      image: 'assets/index/desktop/vestidofloraldesktop.jpg', 
       alt: 'Lançamento moda feminina 2', 
-      link: '/produto/2'
+      link: '/catalogo/maisum/summerpreview'
     },
     { 
-      image: 'assets/index/desktop/teste3.jpg', 
+      image: 'assets/index/desktop/saialongadesktop.jpg', 
       alt: 'Lançamento moda feminina 3', 
-      link: '/produto/3'
+      link: '/catalogo/maisum/summerpreview'
     }
   ];
 
   private readonly heroImages = [
-    'assets/index/mobile/teste1.jpg',
-    'assets/index/mobile/teste2.jpg',
-    'assets/index/mobile/teste3.jpg',
-    'assets/index/mobile/teste2.jpg',
-    'assets/index/mobile/teste1.jpg',
-    'assets/index/mobile/teste3.jpg',
-    'assets/index/mobile/teste2.jpg'
+    'assets/maisum/topmalha1.jpg',
+    'assets/maisum/vestidofloral1.jpg',
+    'assets/maisum/vestidolongopala1.jpg',
+    'assets/maisum/vestidofloral1.jpg',
+    'assets/maisum/topmalha1.jpg',
+    'assets/maisum/vestidolongopala1.jpg',
+    'assets/maisum/vestidofloral1.jpg'
   ];
 
   readonly heroSlides = [...this.heroImages, ...this.heroImages];

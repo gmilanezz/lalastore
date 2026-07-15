@@ -40,9 +40,14 @@
 
       <a class="cart-btn" routerLink="/carrinho" aria-label="Abrir sacola" title="Sacola" (click)="closeMobileMenu()">
         <svg class="cart-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="1.7"/>
-          <path d="M17 22C17.5523 22 18 21.5523 18 21C18 20.4477 17.5523 20 17 20C16.4477 20 16 20.4477 16 21C16 21.5523 16.4477 22 17 22Z" stroke="currentColor" stroke-width="1.7"/>
-          <path d="M3 3H6L8.5 17H19L21 7H7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path
+            d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+            stroke="currentColor" stroke-width="1.7" />
+          <path
+            d="M17 22C17.5523 22 18 21.5523 18 21C18 20.4477 17.5523 20 17 20C16.4477 20 16 20.4477 16 21C16 21.5523 16.4477 22 17 22Z"
+            stroke="currentColor" stroke-width="1.7" />
+          <path d="M3 3H6L8.5 17H19L21 7H7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round" />
         </svg>
 
         <span class="cart-count" *ngIf="cartService.totalItems > 0">
@@ -52,20 +57,11 @@
     </div>
   </div>
 
-  <button
-    class="mobile-backdrop"
-    type="button"
-    aria-label="Fechar menu"
-    *ngIf="isMobileMenuOpen"
-    (click)="closeMobileMenu()"
-  ></button>
+  <button class="mobile-backdrop" type="button" aria-label="Fechar menu" *ngIf="isMobileMenuOpen"
+    (click)="closeMobileMenu()"></button>
 
-  <nav
-    class="mobile-menu"
-    [ngClass]="{ active: isMobileMenuOpen }"
-    aria-label="Menu mobile"
-    (click)="$event.stopPropagation()"
-  >
+  <nav class="mobile-menu" [ngClass]="{ active: isMobileMenuOpen }" aria-label="Menu mobile"
+    (click)="$event.stopPropagation()">
     <ul class="menu-list">
       <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Esmeral' }">
         <button class="menu-link" type="button" (click)="toggleSubmenu('Esmeral')">
@@ -73,8 +69,6 @@
         </button>
 
         <ul class="submenu">
-          <li><a routerLink="/catalogo/Esmeral/catalogo1" (click)="closeMobileMenu()">Catálogo 1</a></li>
-          <li><a routerLink="/catalogo/Esmeral/catalogo2" (click)="closeMobileMenu()">Catálogo 2</a></li>
         </ul>
       </li>
 
@@ -84,8 +78,16 @@
         </button>
 
         <ul class="submenu">
-          <li><a routerLink="/catalogo/kaele/catalogo1" (click)="closeMobileMenu()">Catálogo Verão</a></li>
-          <li><a routerLink="/catalogo/kaele/catalogo2" (click)="closeMobileMenu()">Catálogo Inverno</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'maisum' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('maisum')">
+          MaisUm
+        </button>
+
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/Maisum/summerpreview" (click)="closeMobileMenu()">Summer Preview</a></li>
         </ul>
       </li>
 

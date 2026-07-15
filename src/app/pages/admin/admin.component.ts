@@ -134,7 +134,7 @@ export class AdminComponent implements OnInit {
       brand: 'Esmeral',
       catalog: 'catalogo1',
       category: 'Vestidos',
-      price: 0,
+      price: 300,
       description: '',
       composition: '',
       imagesText: 'assets/index/desktop/teste1.jpg',
