@@ -192,7 +192,7 @@
 
 .btn-add-cart:hover {
   filter: brightness(1.01);
-  transform: translateY(-1px);
+  transform: translateY(-3px);
 }
 
 .btn-add-cart.is-added {

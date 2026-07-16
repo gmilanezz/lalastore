@@ -127,7 +127,8 @@
 }
 
 .checkout-whatsapp:hover {
-  filter: brightness(0.95);
+  background: #F7E9CF;
+  color: #4A035F;
 }
 
 .empty-cart {
@@ -149,21 +150,22 @@
 
 .empty-cart a {
   background: var(--primary-purple);
-  border-radius: 999px;
+  border: 0;
   color: var(--text-light);
-  display: inline-flex;
-  justify-content: center;
-  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-weight: 500;
   text-decoration: none;
+  justify-content: center;
+  padding: 0.8rem;
 }
 
 .empty-cart {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
 .empty-cart p {
-  margin: 0.6rem 0 1.4rem;
+  margin: 0.6rem 0 2.5rem;
 }
 
 .empty-cart h2 {
