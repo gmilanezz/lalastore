@@ -1,0 +1,92 @@
+.policy-page {
+    background: #fff;
+    color: #222;
+    min-height: 70vh;
+}
+
+.policy-content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 50px 5%;
+}
+
+.breadcrumb {
+    color: #777;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-link {
+    background: none;
+    border: 0;
+    color: #4A035F;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+.main-title {
+    color: #4A035F;
+    font-size: 1.6rem;
+    padding: 30px 0 40px;
+    text-align: center;
+}
+
+.faq-list {
+    display: grid;
+    gap: 2rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(74, 3, 95, 0.16);
+    padding-bottom: 1.8rem;
+}
+
+.faq-item:last-child {
+    border-bottom: 0;
+}
+
+.faq-item h2 {
+    color: #4A035F;
+    font-size: 1.15rem;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+.faq-item p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    text-align: left;
+}
+
+.faq-item a {
+    color: #4A035F;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .policy-content {
+        padding: 40px 6%;
+    }
+    .main-title {
+        font-size: 1.45rem;
+    }
+    .faq-item h2 {
+        font-size: 1.05rem;
+    }
+    .faq-item p {
+        font-size: 0.96rem;
+    }
+}

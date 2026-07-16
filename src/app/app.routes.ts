@@ -8,6 +8,7 @@ import { TrocaDevolucaoComponent } from './pages/troca-devolucao/troca-devolucao
 import { FreteComponent } from './pages/frete/frete.component';
 import { PagamentoComponent } from './pages/pagamento/pagamento.component';
 import { TermosusoComponent } from './pages/termosuso/termosuso.component';
+import { PerguntasComponent } from './pages/perguntas/perguntas.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Lala Store VIP' },
@@ -19,5 +20,6 @@ export const routes: Routes = [
   { path: 'termosuso', component: TermosusoComponent, title: 'Lala Store VIP'},
   { path: 'frete', component: FreteComponent, title: 'Lala Store VIP'},
   { path: 'pagamento', component: PagamentoComponent, title: 'Lala Store VIP'},
+  { path: 'perguntas', component: PerguntasComponent, title: 'Lala Store VIP'},
   { path: '**', redirectTo: '' }
 ];

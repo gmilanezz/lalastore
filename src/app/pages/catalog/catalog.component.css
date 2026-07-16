@@ -41,7 +41,7 @@
   grid-template-columns: 2fr 1fr auto;
   margin: 2rem auto;
   max-width: 1200px;
-  padding: 0 5%;
+  padding: 20px 5% 5px;
 }
 
 .filters label {
@@ -75,8 +75,8 @@
   gap: 1.4rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 5% 3rem;
+  max-width: 80%;
+  padding: 0 0 90px;
 }
 
 .empty-state {

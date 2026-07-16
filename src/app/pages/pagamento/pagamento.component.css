@@ -1,7 +1,6 @@
 .breadcrumb {
   color: #777;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .breadcrumb-link {
@@ -33,7 +32,7 @@
 .main-title {
   color: #4A035F;
   font-size: 1.6rem;
-  margin-bottom: 20px;
+  padding: 40px 0 20px;
   text-align: center;
 }
 

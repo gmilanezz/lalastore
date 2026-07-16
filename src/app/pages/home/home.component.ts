@@ -23,17 +23,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     { 
       image: 'assets/index/desktop/topmalhadesktop.jpg', 
       alt: 'Catálogo Summer Preview',
-      link: '/catalogo/maisum/summerpreview' 
+      link: '/catalogo/maisum/Summer Preview' 
     },
     { 
       image: 'assets/index/desktop/vestidofloraldesktop.jpg', 
       alt: 'Lançamento moda feminina 2', 
-      link: '/catalogo/maisum/summerpreview'
+      link: '/catalogo/maisum/Summer Preview'
     },
     { 
       image: 'assets/index/desktop/saialongadesktop.jpg', 
       alt: 'Lançamento moda feminina 3', 
-      link: '/catalogo/maisum/summerpreview'
+      link: '/catalogo/maisum/Summer Preview'
     }
   ];
 
