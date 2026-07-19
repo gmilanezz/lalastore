@@ -41,7 +41,7 @@
   grid-template-columns: 2fr 1fr auto;
   margin: 2rem auto;
   max-width: 1200px;
-  padding: 20px 5% 5px;
+  padding: 10px 5% 5px;
 }
 
 .filters label {
@@ -72,10 +72,11 @@
 
 .catalog-grid {
   display: grid;
-  gap: 1.4rem;
+  gap: 2.3rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 0 auto;
-  max-width: 70%;
+  max-width: 1200px;
+  padding: 0 0 60px;
 }
 
 .empty-state {
@@ -99,5 +100,14 @@
 @media (max-width: 800px) {
   .filters {
     grid-template-columns: 1fr;
+  }
+  .catalog-grid{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .catalog-grid{
+    max-width: 80%;
   }
 }

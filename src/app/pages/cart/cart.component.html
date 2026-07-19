@@ -43,7 +43,8 @@
         {{ cartService.totalPrice | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
       </p>
 
-      <a class="checkout-whatsapp" [href]="checkoutWhatsappUrl" target="_blank" rel="noopener">
+      <a class="checkout-whatsapp" [href]="checkoutWhatsappUrl" target="_blank" rel="noopener"
+        (click)="clearCartAfterCheckout()">
         Finalizar compra pelo WhatsApp
       </a>
     </div>

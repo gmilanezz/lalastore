@@ -86,4 +86,10 @@ Total: ${this.formatCurrency(this.cartService.totalPrice)}
       currency: 'BRL'
     });
   }
+
+  clearCartAfterCheckout(): void {
+    setTimeout(() => {
+      this.cartService.clearCart();
+    }, 300);
+  }
 }
