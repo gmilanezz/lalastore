@@ -81,8 +81,6 @@
 
 .empty-state {
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 16px 36px rgba(74, 3, 95, 0.08);
   margin: 2rem auto 4rem;
   max-width: 760px;
   padding: 3rem 2rem;

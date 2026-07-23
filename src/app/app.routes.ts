@@ -9,6 +9,7 @@ import { FreteComponent } from './pages/frete/frete.component';
 import { PagamentoComponent } from './pages/pagamento/pagamento.component';
 import { TermosusoComponent } from './pages/termosuso/termosuso.component';
 import { PerguntasComponent } from './pages/perguntas/perguntas.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Lala Store VIP' },
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'frete', component: FreteComponent, title: 'Lala Store VIP'},
   { path: 'pagamento', component: PagamentoComponent, title: 'Lala Store VIP'},
   { path: 'perguntas', component: PerguntasComponent, title: 'Lala Store VIP'},
+  { path: 'sobre', component: SobreComponent, title: 'Lala Store VIP'},
   { path: '**', redirectTo: '' }
 ];

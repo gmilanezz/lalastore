@@ -1,0 +1,38 @@
+.breadcrumb-link {
+  background: none;
+  border: 0;
+  color: #4A035F;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.policy-page {
+  background: #fff;
+  color: #222;
+  min-height: 70vh;
+}
+
+.policy-content {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 50px 5%;
+}
+
+.main-title{
+    font-size: 1.6rem;
+    color: #4A035F;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.policy-content p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
