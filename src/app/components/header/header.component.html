@@ -7,27 +7,38 @@
     <nav class="desktop-menu" aria-label="Menu principal">
       <ul>
         <li class="dropdown">
+          <span>Cachier</span>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/cachier/Nomecatalogo" routerLinkActive="active-link"></a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
           <span>Esmeral</span>
           <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/esmeral/Nomecatalogo" routerLinkActive="active-link"></a></li>
           </ul>
         </li>
 
         <li class="dropdown">
           <span>Kaele</span>
           <ul class="dropdown-menu">
-          </ul>
-        </li>
+            <li><a routerLink="/catalogo/kaele/Nomecatalogo" routerLinkActive="active-link"></a></li>
 
-        <li class="dropdown">
-          <span>MaisUm</span>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/maisum/Summer Preview" routerLinkActive="active-link">Summer Preview</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
           <span>Mysk</span>
           <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/mysk/Nomecatalogo" routerLinkActive="active-link"></a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <span>Rock Lola</span>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/catalogo/rock Lola/Nomecatalogo" routerLinkActive="active-link"></a></li>
           </ul>
         </li>
       </ul>
@@ -63,55 +74,81 @@
   <nav class="mobile-menu" [ngClass]="{ active: isMobileMenuOpen }" aria-label="Menu mobile"
     (click)="$event.stopPropagation()">
     <ul class="menu-list">
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Cachier' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Cachier')">
+          Cachier
+        </button>
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/cachier/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+        </ul>
+      </li>
       <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Esmeral' }">
         <button class="menu-link" type="button" (click)="toggleSubmenu('Esmeral')">
           Esmeral
         </button>
 
         <ul class="submenu">
+          <li><a routerLink="/catalogo/esmeral/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
         </ul>
       </li>
 
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'kaele' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('kaele')">
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Kaele' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Kaele')">
           Kaele
         </button>
 
         <ul class="submenu">
+          <li><a routerLink="/catalogo/kaele/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
         </ul>
       </li>
 
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'maisum' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('maisum')">
-          MaisUm
-        </button>
-
-        <ul class="submenu">
-          <li><a routerLink="/catalogo/Maisum/Summer Preview" (click)="closeMobileMenu()">Summer Preview</a></li>
-        </ul>
-      </li>
-
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'mysk' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('mysk')">
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Mysk' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Mysk')">
           Mysk
         </button>
 
         <ul class="submenu">
-          <li><a routerLink="/catalogo/mysk/catalogo1" (click)="closeMobileMenu()">Lançamentos</a></li>
-          <li><a routerLink="/catalogo/mysk/catalogo2" (click)="closeMobileMenu()">Promoções</a></li>
+          <li><a routerLink="/catalogo/mysk/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
         </ul>
       </li>
 
-      <li class="menu-item">
-        <a class="menu-link" href="#quem-somos" (click)="closeMobileMenu()">Sobre</a>
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Rock Lola' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Rock Lola')">
+          Rock Lola
+        </button>
+
+        <ul class="submenu">
+          <li><a routerLink="/catalogo/rocklola/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+        </ul>
       </li>
 
-      <li class="menu-item">
-        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Perguntas Frequentes</a>
-      </li>
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Sobre' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Sobre')">
+          Sobre
+        </button>
 
-      <li class="menu-item">
-        <a class="menu-link" href="#politicas" (click)="closeMobileMenu()">Contato</a>
+        <ul class="submenu">
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/sobre">Sobre a Lala Store</a>
+          </li>
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/perguntas">Perguntas Frequentes</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Política' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('Política')">
+          Política
+        </button>
+
+        <ul class="submenu">
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/frete">Entrega e Frete</a>
+          </li>
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/pagamento">Pagamento</a>
+          </li>
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/troca-devolucao">Trocas e Devoluções</a>
+          </li>
+          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/termosuso">Termos de Uso</a>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>
