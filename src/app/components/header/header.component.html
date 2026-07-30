@@ -7,31 +7,28 @@
     <nav class="desktop-menu" aria-label="Menu principal">
       <ul>
         <li class="dropdown">
-          <span>Cachier</span>
+          <span>Aurore</span>
           <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/cachier/Nomecatalogo" routerLinkActive="active-link"></a></li>
+            <li><a routerLink="/catalogo/Aurore/The Meeting" routerLinkActive="active-link">The Meeting</a></li>
           </ul>
         </li>
-
         <li class="dropdown">
           <span>Esmeral</span>
           <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/esmeral/Nomecatalogo" routerLinkActive="active-link"></a></li>
+            <li><a routerLink="/catalogo/Esmeral/Summer Dream" routerLinkActive="active-link">Summer Dream</a></li>
           </ul>
         </li>
-
         <li class="dropdown">
           <span>Kaele</span>
           <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/kaele/Nomecatalogo" routerLinkActive="active-link"></a></li>
-
+            <li><a routerLink="/catalogo/kaele/Lucentia II" routerLinkActive="active-link">Lucentia II</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
           <span>Mysk</span>
           <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/mysk/Nomecatalogo" routerLinkActive="active-link"></a></li>
+            <li><a routerLink="/catalogo/mysk/Travels - Laura Dellagnese" routerLinkActive="active-link">Travels - Laura Dellagnese</a></li>
           </ul>
         </li>
 
@@ -60,7 +57,6 @@
           <path d="M3 3H6L8.5 17H19L21 7H7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
             stroke-linejoin="round" />
         </svg>
-
         <span class="cart-count" *ngIf="cartService.totalItems > 0">
           {{ cartService.totalItems }}
         </span>
@@ -74,21 +70,20 @@
   <nav class="mobile-menu" [ngClass]="{ active: isMobileMenuOpen }" aria-label="Menu mobile"
     (click)="$event.stopPropagation()">
     <ul class="menu-list">
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Cachier' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Cachier')">
-          Cachier
+      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'aurore' }">
+        <button class="menu-link" type="button" (click)="toggleSubmenu('aurore')">
+          Aurore
         </button>
         <ul class="submenu">
-          <li><a routerLink="/catalogo/cachier/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+          <li><a routerLink="/catalogo/Aurore/The Meeting" (click)="closeMobileMenu()">The Meeting</a></li>
         </ul>
       </li>
       <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Esmeral' }">
         <button class="menu-link" type="button" (click)="toggleSubmenu('Esmeral')">
           Esmeral
         </button>
-
         <ul class="submenu">
-          <li><a routerLink="/catalogo/esmeral/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+          <li><a routerLink="/catalogo/Esmeral/Summer Dream" (click)="closeMobileMenu()">Summer Dream</a></li>
         </ul>
       </li>
 
@@ -96,9 +91,8 @@
         <button class="menu-link" type="button" (click)="toggleSubmenu('Kaele')">
           Kaele
         </button>
-
         <ul class="submenu">
-          <li><a routerLink="/catalogo/kaele/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+          <li><a routerLink="/catalogo/Kaele/Lucentia II" (click)="closeMobileMenu()">Lucentia II</a></li>
         </ul>
       </li>
 
@@ -106,9 +100,8 @@
         <button class="menu-link" type="button" (click)="toggleSubmenu('Mysk')">
           Mysk
         </button>
-
         <ul class="submenu">
-          <li><a routerLink="/catalogo/mysk/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
+          <li><a routerLink="/catalogo/Mysk/Travels - Laura Dellagnese" (click)="closeMobileMenu()">Travels - Laura Dellagnese</a></li>
         </ul>
       </li>
 
@@ -116,7 +109,6 @@
         <button class="menu-link" type="button" (click)="toggleSubmenu('Rock Lola')">
           Rock Lola
         </button>
-
         <ul class="submenu">
           <li><a routerLink="/catalogo/rocklola/Nomecatalogo" (click)="closeMobileMenu()"></a></li>
         </ul>
