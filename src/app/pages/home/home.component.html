@@ -53,7 +53,7 @@
 
   <section class="hero-carousel" aria-label="Outras imagens do catálogo">
     <div class="hero-track">
-      <a [routerLink]="['/catalogo', 'mysk', 'catalogo1']" class="hero-slide"
+      <a [routerLink]="['/catálogo', 'Esmeral', 'Summer Dream']" class="hero-slide"
         *ngFor="let image of heroSlides; let index = index; trackBy: trackByHeroImage">
         <img [src]="image" [alt]="'Imagem de catálogo ' + (index + 1)">
       </a>

@@ -21,30 +21,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   readonly slides = [
     { 
-      image: 'assets/index/desktop/topmalhadesktop.jpg', 
-      alt: 'Catálogo Summer Preview',
-      link: '/catalogo/maisum/Summer Preview' 
+      image: 'assets/esmeral/38789-3.jpg', 
+      alt: 'Catálogo Summer Dream',
+      link: '/catalogo/esmeral/Summer Dream' 
     },
     { 
-      image: 'assets/index/desktop/vestidofloraldesktop.jpg', 
-      alt: 'Lançamento moda feminina 2', 
-      link: '/catalogo/maisum/Summer Preview'
+      image: 'assets/esmeral/39513-1.jpg', 
+      alt: 'Summer Dream', 
+      link: '/catalogo/esmeral/Summer Dream'
     },
     { 
-      image: 'assets/index/desktop/saialongadesktop.jpg', 
-      alt: 'Lançamento moda feminina 3', 
-      link: '/catalogo/maisum/Summer Preview'
+      image: 'assets/esmeral/39735-1.jpg', 
+      alt: 'Summer Dream', 
+      link: '/catalogo/esmeral/Summer Dream'
     }
   ];
 
   private readonly heroImages = [
-    'assets/maisum/topmalha1.jpg',
-    'assets/maisum/vestidofloral1.jpg',
-    'assets/maisum/vestidolongopala1.jpg',
-    'assets/maisum/vestidofloral1.jpg',
-    'assets/maisum/topmalha1.jpg',
-    'assets/maisum/vestidolongopala1.jpg',
-    'assets/maisum/vestidofloral1.jpg'
+    'assets/esmeral/39735-1.jpg',
+    'assets/mysk/11012-2.jpg',
+    'assets/msyk/11038-2.jpg',
+    'assets/kaele/8077-2.jpg',
+    'assets/kaele/8078-2.jpg',
+    'assets/esmeral/39519-2.jpg',
+    'assets/esmeral/39540-2.jpg'
   ];
 
   readonly heroSlides = [...this.heroImages, ...this.heroImages];
