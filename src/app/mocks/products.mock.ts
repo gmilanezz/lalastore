@@ -13,8 +13,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Paola do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 100% Poliéster",
     images: [
-      "assets/mysk/11053-1.jpg",
       "assets/mysk/11053-2.jpg",
+      "assets/mysk/11053-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -39,6 +39,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Paola do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 100% Poliéster",
     images: [
+      "assets/mysk/11054-2.jpg",
       "assets/mysk/11054-1.jpg",
     ],
     colors: [
@@ -64,7 +65,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Renda Cíntia do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Renda | 100% Poliamida",
     images: [
-      "assets/mysk/11074-1.jpg"
+      "assets/mysk/11074-3.jpg",
+      "assets/mysk/11074-2.jpg",
+      "assets/mysk/11074-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -88,7 +91,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Top Vivian do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Malha de Poliamida | 90% Poliamida | 10% Elastano",
     images: [
-      "assets/mysk/11161-1.jpg"
+      "assets/mysk/11161-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -114,7 +117,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Angel do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Tecido 1: Renda | 100% Poliamida | Tecido 2: Tule | 96% Poliamida | 4% Elastano",
     images: [
-      "assets/mysk/11041-1.jpg"
+      "assets/mysk/11041-3.jpg",
+      "assets/mysk/11041-2.jpg",
+      "assets/mysk/11041-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -138,7 +143,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Mary do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Tecido 1: Renda | 100% Poliamida | Tecido 2: Tule | 96% Poliamida | 4% Elastano",
     images: [
-      "assets/mysk/11042-1.jpg"
+      "assets/mysk/11042-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -162,7 +167,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "T-shirt Cíntia do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Renda | 100% Poliamida",
     images: [
-      "assets/mysk/11073-1.jpg"
+      "assets/mysk/11073-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -186,7 +191,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Clara do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 97% Poliéster | 3% Elastano",
     images: [
-      "assets/mysk/11050-1.jpg"
+      "assets/mysk/11050-3.jpg",
+      "assets/mysk/11050-2.jpg",
+      "assets/mysk/11050-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -210,7 +217,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Clara do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 97% Poliéster | 3% Elastano",
     images: [
-      "assets/mysk/11056-1.jpg"
+      "assets/mysk/11056-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -234,7 +241,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Clara do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 97% Poliéster | 3% Elastano",
     images: [
-      "assets/mysk/11060-1.jpg"
+      "assets/mysk/11060-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -258,7 +265,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Beatriz do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11062-1.jpg"
+      "assets/mysk/11062-3.jpg",
+      "assets/mysk/11062-2.jpg",
+      "assets/mysk/11062-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -283,7 +292,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Beatriz do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11038-1.jpg"
+      "assets/mysk/11038-3.jpg",
+      "assets/mysk/11038-2.jpg",
+      "assets/mysk/11038-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -308,7 +319,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Ballon Eduarda do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Jeans | 100% Algodão",
     images: [
-      "assets/mysk/11521-1.jpg"
+      "assets/mysk/11521-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -331,7 +342,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Helena do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Tecido 1: Chiffon | 100% Poliéster | Tecido 2: 97% Algodão | 3% Elastano",
     images: [
-      "assets/mysk/11052-1.jpg"
+      "assets/mysk/11052-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -355,7 +366,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Nina do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11051-1.jpg"
+      "assets/mysk/11051-2.jpg",
+      "assets/mysk/11051-1.jpg",
     ],
     colors: [
       { name: "Rosa", hex: "#F5B6C8" },
@@ -379,7 +391,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Colete Manu do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Sarja | 60% Liocel | 40% Algodão",
     images: [
-      "assets/mysk/11089-1.jpg"
+      "assets/mysk/11089-3.jpg",
+      "assets/mysk/11089-2.jpg",
+      "assets/mysk/11089-1.jpg",
     ],
     colors: [
       { name: "Mascavo", hex: "#7B4A2E" },
@@ -403,7 +417,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Manu do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Sarja | 60% Liocel | 40% Algodão",
     images: [
-      "assets/mysk/11075-1.jpg"
+      "assets/mysk/11075-1.jpg",
     ],
     colors: [
       { name: "Mascavo", hex: "#7B4A2E" },
@@ -427,7 +441,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Shorts Listras Largas do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Sarja | 100% Algodão",
     images: [
-      "assets/mysk/11519-1.jpg"
+      "assets/mysk/11519-2.jpg",
+      "assets/mysk/11519-1.jpg",
     ],
     colors: [
       { name: "Marrom", hex: "#6B3F2A" },
@@ -450,7 +465,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blazer Luana do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Alfaiataria | 93% Viscose | 7% Poliéster",
     images: [
-      "assets/mysk/11063-1.jpg"
+      "assets/mysk/11063-3.jpg",
+      "assets/mysk/11063-2.jpg",
+      "assets/mysk/11063-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -473,7 +490,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Luana do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Alfaiataria | 93% Viscose | 7% Poliéster",
     images: [
-      "assets/mysk/11065-1.jpg"
+      "assets/mysk/11065-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -496,7 +513,10 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Corset Luana do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Alfaiataria | 93% Viscose | 7% Poliéster",
     images: [
-      "assets/mysk/11066-1.jpg"
+      "assets/mysk/11066-4.jpg",
+      "assets/mysk/11066-3.jpg",
+      "assets/mysk/11066-2.jpg",
+      "assets/mysk/11066-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -519,7 +539,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Bermuda Luana do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Alfaiataria | 93% Viscose | 7% Poliéster",
     images: [
-      "assets/mysk/11064-1.jpg"
+      "assets/mysk/11064-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -542,7 +562,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Paola do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Tecido 1: Renda | 100% Poliamida | Tecido 2: Tule | 96% Poliamida | 4% Elastano",
     images: [
-      "assets/mysk/11012-1.jpg"
+      "assets/mysk/11012-3.jpg",
+      "assets/mysk/11012-2.jpg",
+      "assets/mysk/11012-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -566,7 +588,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Duda do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Crepe | 100% Poliéster",
     images: [
-      "assets/mysk/11107-1.jpg"
+      "assets/mysk/11107-2.jpg",
+      "assets/mysk/11107-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -591,7 +614,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Aline do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11035-1.jpg"
+      "assets/mysk/11035-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -614,7 +637,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Frente Única Aline do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11034-1.jpg"
+      "assets/mysk/11034-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -628,7 +651,7 @@ export const MOCK_PRODUCTS: Product[] = [
   {
     id: 27,
     code: "11524",
-    name: "Calça Jeans com Detalhes de Ragos Sara",
+    name: "Calça Jeans Sara",
     slug: "calca-jeans-com-detalhes-de-ragos-sara",
     brand: "mysk",
     catalog: "Travels - Laura Dellagnese",
@@ -637,7 +660,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Jeans com Detalhes de Ragos Sara do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Jeans | 100% Algodão",
     images: [
-      "assets/mysk/11524-1.jpg"
+      "assets/mysk/11524-2.jpg",
+      "assets/mysk/11524-1.jpg",
     ],
     colors: [
       { name: "Denim", hex: "#3E668C" },
@@ -659,7 +683,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Aline do catálogo Travels - Laura Dellagnese 03 08.",
     composition: "Chiffon | 100% Poliéster",
     images: [
-      "assets/mysk/11040-1.jpg"
+      "assets/mysk/11040-2.jpg",
+      "assets/mysk/11040-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -682,9 +707,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Elis do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel",
     images: [
-      "assets/kaele/8154-1.jpg",
-      "assets/kaele/8154-2.jpg",
       "assets/kaele/8154-3.jpg",
+      "assets/kaele/8154-2.jpg",
+      "assets/kaele/8154-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -708,9 +733,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Elis do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel",
     images: [
-      "assets/kaele/8154-1.jpg",
-      "assets/kaele/8154-2.jpg",
-      "assets/kaele/8155.jpg",
+      "assets/kaele/8155-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -734,9 +757,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Fani do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscolinho",
     images: [
-      "assets/kaele/8104-1.jpg",
+      "assets/kaele/8104-3.jpg",
       "assets/kaele/8104-2.jpg",
-      "assets/kaele/8104-3.jpg"
+      "assets/kaele/8104-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -760,9 +783,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Fani do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscolinho",
     images: [
-      "assets/kaele/8104-1.jpg",
-      "assets/kaele/8104-3.jpg",
-      "assets/kaele/8105-1.jpg"
+      "assets/kaele/8105-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -786,9 +807,11 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Algodão",
     images: [
-      "assets/kaele/8095-1.jpg",
+      "assets/kaele/8095-5.jpg",
+      "assets/kaele/8095-4.jpg",
       "assets/kaele/8095-3.jpg",
-      "assets/kaele/8095-2.jpg"
+      "assets/kaele/8095-2.jpg",
+      "assets/kaele/8095-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -811,9 +834,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Short Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Algodão",
     images: [
-      "assets/kaele/8095-1.jpg",
-      "assets/kaele/8095-3.jpg",
-      "assets/kaele/8094-1.jpg"
+      "assets/kaele/8094-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -836,6 +857,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Francine do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
+      "assets/kaele/8077-3.jpg",
       "assets/kaele/8077-2.jpg",
       "assets/kaele/8077-1.jpg",
     ],
@@ -861,9 +883,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Francine do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/kaele/8078-1.jpg",
-      "assets/kaele/8078-2.jpg",
       "assets/kaele/8078-3.jpg",
+      "assets/kaele/8078-2.jpg",
+      "assets/kaele/8078-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -887,7 +909,10 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Diana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Listrada",
     images: [
-      "assets/kaele/8144-1.jpg"
+      "assets/kaele/8144-4.jpg",
+      "assets/kaele/8144-3.jpg",
+      "assets/kaele/8144-2.jpg",
+      "assets/kaele/8144-1.jpg",
     ],
     colors: [
       { name: "Vermelho", hex: "#C62828" },
@@ -910,7 +935,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Diana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Listrada",
     images: [
-      "assets/kaele/8145-1.jpg"
+      "assets/kaele/8145-1.jpg",
     ],
     colors: [
       { name: "Vermelho", hex: "#C62828" },
@@ -933,7 +958,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/kaele/8160-1.jpg"
+      "assets/kaele/8160-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -957,7 +982,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/kaele/8161-1.jpg"
+      "assets/kaele/8161-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -981,7 +1006,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria de Viscose",
     images: [
-      "assets/kaele/8093-1.jpg"
+      "assets/kaele/8093-2.jpg",
+      "assets/kaele/8093-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1005,7 +1031,11 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Macacão Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/kaele/8159-1.jpg"
+      "assets/kaele/8159-5.jpg",
+      "assets/kaele/8159-4.jpg",
+      "assets/kaele/8159-3.jpg",
+      "assets/kaele/8159-2.jpg",
+      "assets/kaele/8159-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1029,7 +1059,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Manu do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria",
     images: [
-      "assets/kaele/8136-1.jpg"
+      "assets/kaele/8136-2.jpg",
+      "assets/kaele/8136-1.jpg",
     ],
     colors: [
       { name: "Creme", hex: "#F7E9CF" },
@@ -1053,7 +1084,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Manu do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria",
     images: [
-      "assets/kaele/8137-1.jpg"
+      "assets/kaele/8137-1.jpg",
     ],
     colors: [
       { name: "Creme", hex: "#F7E9CF" },
@@ -1077,7 +1108,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Colete Geórgia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Twill",
     images: [
-      "assets/kaele/8146-1.jpg"
+      "assets/kaele/8146-3.jpg",
+      "assets/kaele/8146-2.jpg",
+      "assets/kaele/8146-1.jpg",
     ],
     colors: [
       { name: "Salmão", hex: "#F4A89A" },
@@ -1101,7 +1134,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Geórgia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Twill",
     images: [
-      "assets/kaele/8147-1.jpg"
+      "assets/kaele/8147-1.jpg",
     ],
     colors: [
       { name: "Salmão", hex: "#F4A89A" },
@@ -1125,7 +1158,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8165-1.jpg"
+      "assets/kaele/8165-3.jpg",
+      "assets/kaele/8165-2.jpg",
+      "assets/kaele/8165-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1149,7 +1184,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8163-1.jpg"
+      "assets/kaele/8163-2.jpg",
+      "assets/kaele/8163-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -1173,7 +1209,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Maira do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Cotelê",
     images: [
-      "assets/kaele/8123-1.jpg"
+      "assets/kaele/8123-3.jpg",
+      "assets/kaele/8123-2.jpg",
+      "assets/kaele/8123-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1197,7 +1235,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8164-1.jpg"
+      "assets/kaele/8164-2.jpg",
+      "assets/kaele/8164-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -1221,7 +1260,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Amber do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8176-1.jpg"
+      "assets/kaele/8176-5.jpg",
+      "assets/kaele/8176-4.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1244,7 +1284,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Amber do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8177-1.jpg"
+      "assets/kaele/8176-3.jpg",
+      "assets/kaele/8176-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1267,7 +1308,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Capa Mirela do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/kaele/8157-1.jpg"
+      "assets/kaele/8157-3.jpg",
+      "assets/kaele/8157-2.jpg",
+      "assets/kaele/8157-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1291,7 +1334,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Mirela do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/kaele/8158-1.jpg"
+      "assets/kaele/8158-3.jpg",
+      "assets/kaele/8158-2.jpg",
+      "assets/kaele/8158-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1315,7 +1360,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Tati do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Texturizado",
     images: [
-      "assets/kaele/8054-1.jpg"
+      "assets/kaele/8054-1.jpg",
     ],
     colors: [
       { name: "Amarelo", hex: "#F4D76B" },
@@ -1339,7 +1384,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Tati do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Texturizado",
     images: [
-      "assets/kaele/8055-1.jpg"
+      "assets/kaele/8055-1.jpg",
     ],
     colors: [
       { name: "Amarelo", hex: "#F4D76B" },
@@ -1363,7 +1408,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Jess do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Canelada",
     images: [
-      "assets/kaele/8098-1.jpg"
+      "assets/kaele/8098-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1388,7 +1433,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Mariana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Risca de Giz",
     images: [
-      "assets/kaele/8132-1.jpg"
+      "assets/kaele/8132-2.jpg",
+      "assets/kaele/8132-1.jpg",
     ],
     colors: [
       { name: "Bege", hex: "#D9C8AD" },
@@ -1411,7 +1457,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Mariana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Risca de Giz",
     images: [
-      "assets/kaele/8133-1.jpg"
+      "assets/kaele/8133-1.jpg",
     ],
     colors: [
       { name: "Bege", hex: "#D9C8AD" },
@@ -1434,7 +1480,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/kaele/8162-1.jpg"
+      "assets/kaele/8162-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1458,7 +1504,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Tricot do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Tricot",
     images: [
-      "assets/kaele/8505-1.jpg"
+      "assets/kaele/8505-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1482,7 +1528,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Isabel do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Denim",
     images: [
-      "assets/kaele/8508-1.jpg"
+      "assets/kaele/8508-1.jpg",
     ],
     colors: [
       { name: "Marinho", hex: "#0B1F3A" },
@@ -1504,7 +1550,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Dupla Maira do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Cotelê",
     images: [
-      "assets/kaele/8124-1.jpg"
+      "assets/kaele/8124-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -1519,1363 +1565,1115 @@ export const MOCK_PRODUCTS: Product[] = [
   },
   {
     id: 64,
-    code: "39689",
+    code: '39689',
     name: "Blusa Peplum Sarja Listrada",
-    slug: "blusa-peplum-sarja-listrada",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-peplum-sarja-listrada-39689',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 299.80,
-    description: "Blusa Peplum Sarja Listrada do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Sarja | Composição: 76% Algodão | 22% Poliéster | 2% Elastano",
+    description: "Blusa peplum em sarja listrada.",
+    composition: "76% algodão, 22% poliéster e 2% elastano",
     images: [
-      "assets/esmeral/39689-1.jpg"
+      'assets/esmeral/39689-2.jpg',
+      'assets/esmeral/39689-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
+      { name: "Bege", hex: '#C6A078' },
+      { name: "Marrom", hex: '#4A2C26' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 65,
-    code: "39648",
+    code: '39648',
     name: "Calça Sarja Listras",
-    slug: "calca-sarja-listras",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'calca-sarja-listras-39648',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Calça",
     price: 479.80,
-    description: "Calça Sarja Listras do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Sarja | Composição: 76% Algodão | 22% Poliéster | 2% Elastano",
+    description: "Calça em sarja listrada.",
+    composition: "76% algodão, 22% poliéster e 2% elastano",
     images: [
-      "assets/esmeral/39648-1.jpg"
+      'assets/esmeral/39648-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
+      { name: "Bege", hex: '#C6A078' },
+      { name: "Marrom", hex: '#4A2C26' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 66,
-    code: "39630",
-    name: "Blusa Cetim com Renda",
-    slug: "blusa-cetim-com-renda",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Blusa",
-    price: 259.80,
-    description: "Blusa Cetim com Renda do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Cetim | Composição: 100% Poliéster",
+    code: '39697',
+    name: "Shorts Sarja Listrada",
+    slug: 'shorts-sarja-listrada-39697',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
+    category: "Shorts",
+    price: 319.80,
+    description: "Shorts em sarja listrada.",
+    composition: "76% algodão, 22% poliéster e 2% elastano",
     images: [
-      "assets/esmeral/39630-1.jpg"
+      'assets/esmeral/39697-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Rosa", hex: "#F5B6C8" },
+      { name: "Bege", hex: '#C6A078' },
+      { name: "Marrom", hex: '#4A2C26' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 67,
-    code: "39697",
-    name: "Shorts Sarja Listrada",
-    slug: "shorts-sarja-listrada",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Shorts",
-    price: 319.80,
-    description: "Shorts Sarja Listrada do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Sarja | Composição: 76% Algodão | 22% Poliéster | 2% Elastano",
+    code: '39630',
+    name: "Blusa Cetim com Renda",
+    slug: 'blusa-cetim-com-renda-39630',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
+    category: "Blusa",
+    price: 259.80,
+    description: "Blusa em cetim com detalhe de renda.",
+    composition: "100% poliéster",
     images: [
-      "assets/esmeral/39697-1.jpg"
+      'assets/esmeral/39630-2.jpg',
+      'assets/esmeral/39630-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
+      { name: "Rosa", hex: '#D8B8BE' },
+      { name: "Marrom", hex: '#3C2724' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 68,
-    code: "39628",
+    code: '39628',
     name: "Vestido Assimétrico Malha",
-    slug: "vestido-assimetrico-malha",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'vestido-assimetrico-malha-39628',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Vestido",
     price: 387.80,
-    description: "Vestido Assimétrico Malha do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Malha | Composição: 92% Poliéster | 8% Elastano",
+    description: "Vestido assimétrico em malha.",
+    composition: "92% poliéster e 8% elastano",
     images: [
-      "assets/esmeral/39628-1.jpg"
+      'assets/esmeral/39628-2.jpg',
+      'assets/esmeral/39628-1.jpg',
     ],
     colors: [
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Preto", hex: "#111111" },
+      { name: "Bege", hex: '#D8C9AE' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 69,
-    code: "39699",
+    code: '39699',
     name: "Vestido Tubo Malha",
-    slug: "vestido-tubo-malha",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'vestido-tubo-malha-39699',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Vestido",
     price: 459.80,
-    description: "Vestido Tubo Malha do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Malha | Composição: 92% Poliéster | 8% Elastano",
+    description: "Vestido tubo em malha.",
+    composition: "92% poliéster e 8% elastano",
     images: [
-      "assets/esmeral/39699-1.jpg"
+      'assets/esmeral/39699-2.jpg',
+      'assets/esmeral/39699-1.jpg',
     ],
     colors: [
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Preto", hex: "#111111" },
+      { name: "Bege", hex: '#D8C9AE' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 70,
-    code: "39508",
+    code: '39508',
     name: "Blusa Peplum Alfaiataria",
-    slug: "blusa-peplum-alfaiataria",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-peplum-alfaiataria-39508',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 199.80,
-    description: "Blusa Peplum Alfaiataria do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 95% Poliéster | 5% Elastano",
+    description: "Blusa peplum em alfaiataria.",
+    composition: "95% poliéster e 5% elastano",
     images: [
-      "assets/esmeral/39508-1.jpg"
+      'assets/esmeral/39508-2.jpg',
+      'assets/esmeral/39508-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Rosa", hex: "#F5B6C8" },
+      { name: "Bege", hex: '#E7DFD0' },
+      { name: "Marrom", hex: '#5B382F' },
+      { name: "Rosa", hex: '#DFA8B2' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 71,
-    code: "39530",
+    code: '39530',
     name: "Calça Balloon Alfaiataria",
-    slug: "calca-balloon-alfaiataria",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'calca-balloon-alfaiataria-39530',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Calça",
     price: 399.80,
-    description: "Calça Balloon Alfaiataria do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 95% Poliéster | 5% Elastano",
+    description: "Calça balloon em alfaiataria.",
+    composition: "95% poliéster e 5% elastano",
     images: [
-      "assets/esmeral/39530-1.jpg"
+      'assets/esmeral/39508-2.jpg',
+      'assets/esmeral/39530-2.jpg',
+      'assets/esmeral/39530-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Rosa", hex: "#F5B6C8" },
+      { name: "Bege", hex: '#E7DFD0' },
+      { name: "Marrom", hex: '#5B382F' },
+      { name: "Rosa", hex: '#DFA8B2' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 72,
-    code: "39519",
-    name: "Top Sem Alças Alfaiataria",
-    slug: "top-sem-alcas-alfaiataria",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    code: '39519',
+    name: "Top sem Alças Alfaiataria",
+    slug: 'top-sem-alcas-alfaiataria-39519',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Top",
     price: 299.80,
-    description: "Top Sem Alças Alfaiataria do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 95% Poliéster | 5% Elastano",
+    description: "Top sem alças em alfaiataria.",
+    composition: "95% poliéster e 5% elastano",
     images: [
-      "assets/esmeral/39519-1.jpg"
+      'assets/esmeral/39519-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Rosa", hex: "#F5B6C8" },
+      { name: "Bege", hex: '#E7DFD0' },
+      { name: "Marrom", hex: '#5B382F' },
+      { name: "Rosa", hex: '#DFA8B2' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 73,
-    code: "39650",
+    code: '39650',
     name: "Blusa Um Ombro Tule",
-    slug: "blusa-um-ombro-tule",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-um-ombro-tule-39650',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 197.80,
-    description: "Blusa Um Ombro Tule do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Tule | Composição: 96% Poliéster | 4% Elastano",
+    description: "Blusa de um ombro em tule.",
+    composition: "96% poliéster e 4% elastano",
     images: [
-      "assets/esmeral/39650-1.jpg"
+      'assets/esmeral/39650-1.jpg',
     ],
     colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Rosa", hex: "#F5B6C8" },
-      { name: "Marrom", hex: "#6B3F2A" },
+      { name: "Rosa", hex: '#E5B9C2' },
+      { name: "Marrom", hex: '#6B4438' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 74,
-    code: "39678",
+    code: '39678',
     name: "Blusa Manga Longa Renda",
-    slug: "blusa-manga-longa-renda",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-manga-longa-renda-39678',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 179.80,
-    description: "Blusa Manga Longa Renda do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Renda | Composição: 65% Algodão | 35% Poliamida",
+    description: "Blusa de manga longa em renda.",
+    composition: "65% algodão e 35% poliamida",
     images: [
-      "assets/esmeral/39678-1.jpg"
+      'assets/esmeral/39678-2.jpg',
+      'assets/esmeral/39678-1.jpg',
     ],
     colors: [
-      { name: "Creme", hex: "#F7E9CF" },
-      { name: "Marrom", hex: "#6B3F2A" },
+      { name: "Creme", hex: '#F3EBDD' },
+      { name: "Marrom", hex: '#B48A54' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 75,
-    code: "39654",
+    code: '39654',
     name: "Calça Aladin Peplum",
-    slug: "calca-aladin-peplum",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'calca-aladin-peplum-39654',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Calça",
     price: 539.80,
-    description: "Calça Aladin Peplum do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Viscolinho",
+    description: "Calça aladin peplum em viscolinho.",
+    composition: "Não informada no catálogo (tecido: viscolinho)",
     images: [
-      "assets/esmeral/39654-1.jpg"
+      'assets/esmeral/39678-2.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Branco", hex: '#F7F7F4' },
+      { name: "Bege", hex: '#C9A57A' },
+      { name: "Azul", hex: '#C6D9E9' },
+      { name: "Marrom", hex: '#725548' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 76,
-    code: "38854",
+    code: '38854',
     name: "Vestido Alça Laço Poá",
-    slug: "vestido-alca-laco-poa",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'vestido-alca-laco-poa-38854',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Vestido",
     price: 399.80,
-    description: "Vestido Alça Laço Poá do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Chiffon | Composição: 100% Poliéster",
+    description: "Vestido de alças com laço e estampa poá.",
+    composition: "100% poliéster",
     images: [
-      "assets/esmeral/38854-1.jpg"
+      'assets/esmeral/38854-2.jpg',
+      'assets/esmeral/38854-1.jpg',
     ],
     colors: [
-      { name: "Azul", hex: "#7FA8D8" },
-      { name: "Bege", hex: "#D9C8AD" },
+      { name: "Bege", hex: '#EAD9AD' },
+      { name: "Azul", hex: '#D5E0E8' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 77,
-    code: "38789",
+    code: '38789',
     name: "Blusa Peplum Poá",
-    slug: "blusa-peplum-poa",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-peplum-poa-38789',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 159.80,
-    description: "Blusa Peplum Poá do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Chiffon",
+    description: "Blusa peplum com estampa poá em chiffon.",
+    composition: "Não informada no catálogo (tecido: chiffon)",
     images: [
-      "assets/esmeral/38789-1.jpg"
+      'assets/esmeral/38789-2.jpg',
+      'assets/esmeral/39654-1.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Amarelo", hex: '#F2E3B5' },
+      { name: "Azul", hex: '#C9DCEB' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 78,
-    code: "39543",
+    code: '39543',
     name: "Calça Barrel Cós Elástico",
-    slug: "calca-barrel-cos-elastico",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'calca-barrel-cos-elastico-39543',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Calça",
     price: 391.80,
-    description: "Calça Barrel Cós Elástico do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 92% Viscose | 8% Poliéster",
+    description: "Calça barrel com cós elástico em alfaiataria.",
+    composition: "92% viscose e 8% poliéster",
     images: [
-      "assets/esmeral/39543-1.jpg"
+      'assets/esmeral/38789-2.jpg',
+      'assets/esmeral/39543-1.jpg',
     ],
     colors: [
-      { name: "Rosa", hex: "#F5B6C8" },
-      { name: "Amarelo", hex: "#F4D76B" },
-      { name: "Marrom", hex: "#6B3F2A" },
+      { name: "Amarelo", hex: '#F1E1B4' },
+      { name: "Rosa", hex: '#E6B5BC' },
+      { name: "Marrom", hex: '#765345' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 79,
-    code: "39540",
+    code: '39540',
     name: "Blusa Degagê Comprida",
-    slug: "blusa-degage-comprida",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'blusa-degage-comprida-39540',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Blusa",
     price: 339.80,
-    description: "Blusa Degagê Comprida do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 92% Viscose | 8% Poliéster",
+    description: "Blusa comprida com decote degagê em alfaiataria.",
+    composition: "92% viscose e 8% poliéster",
     images: [
-      "assets/esmeral/39540-1.jpg"
+      'assets/esmeral/39540-1.jpg',
+      'assets/esmeral/39540-2.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Rosa", hex: "#F5B6C8" },
-      { name: "Amarelo", hex: "#F4D76B" },
+      { name: "Amarelo", hex: '#EADDBB' },
+      { name: "Rosa", hex: '#DDB0B8' },
+      { name: "Marrom", hex: '#765345' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 80,
-    code: "39535",
+    code: '39535',
     name: "Calça Wide Alfaiataria",
-    slug: "calca-wide-alfaiataria",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    slug: 'calca-wide-alfaiataria-39535',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
     category: "Calça",
     price: 459.80,
-    description: "Calça Wide Alfaiataria do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria | Composição: 92% Viscose | 8% Poliéster",
+    description: "Calça wide em alfaiataria.",
+    composition: "92% viscose e 8% poliéster",
     images: [
-      "assets/esmeral/39535-1.jpg"
+      'assets/esmeral/39535-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Rosa", hex: "#F5B6C8" },
-      { name: "Amarelo", hex: "#F4D76B" },
+      { name: "Amarelo", hex: '#EADDBB' },
+      { name: "Rosa", hex: '#DDB0B8' },
+      { name: "Marrom", hex: '#765345' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 81,
-    code: "39510",
-    name: "Saia Midi Couro P.U",
-    slug: "saia-midi-couro-p-u",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Saia",
-    price: 299.80,
-    description: "Saia Midi Couro P.U do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Couro P.U | Composição: 100% Poliéster",
+    code: '39513',
+    name: "Top sem Alças Couro P.U",
+    slug: 'top-sem-alcas-couro-p-u-39513',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
+    category: "Top",
+    price: 259.80,
+    description: "Top sem alças em couro P.U.",
+    composition: "100% poliéster",
     images: [
-      "assets/esmeral/39510-1.jpg"
+      'assets/esmeral/39513-2.jpg',
+      'assets/esmeral/39513-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Preto", hex: "#111111" },
+      { name: "Marrom", hex: '#633A2E' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 82,
-    code: "39513",
-    name: "Top Sem Alças Couro P.U",
-    slug: "top-sem-alcas-couro-p-u",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Top",
-    price: 259.80,
-    description: "Top Sem Alças Couro P.U do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Couro P.U | Composição: 100% Poliéster",
+    code: '39510',
+    name: "Saia Midi Couro P.U",
+    slug: 'saia-midi-couro-p-u-39510',
+    brand: 'Esmeral',
+    catalog: 'Summer Dream',
+    category: "Saia",
+    price: 299.80,
+    description: "Saia midi em couro P.U.",
+    composition: "100% poliéster",
     images: [
-      "assets/esmeral/39513-1.jpg"
+      'assets/esmeral/39510-2.jpg',
+      'assets/esmeral/39510-1.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Preto", hex: "#111111" },
+      { name: "Marrom", hex: '#633A2E' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['P', 'M', 'G'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 83,
-    code: "39735",
-    name: "Tee Básica Algodão",
-    slug: "tee-basica-algodao",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "T-shirt",
-    price: 165.80,
-    description: "Tee Básica Algodão do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Malha",
+    code: 'AURORE-097',
+    name: "Conjunto Amanda",
+    slug: 'conjunto-amanda-aurore-097',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Conjunto",
+    price: 619.80,
+    description: "Conjunto Amanda em alfaiataria twil.",
+    composition: "Alfaiataria twil",
     images: [
-      "assets/esmeral/39735-1.jpg"
+      'assets/aurore/AURORE-097-2.jpg',
+      'assets/aurore/AURORE-097-3.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Rosa", hex: '#F4C7D4' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 84,
-    code: "39244",
-    name: "Blusa Decote Degagê Malha",
-    slug: "blusa-decote-degage-malha",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Blusa",
-    price: 239.80,
-    description: "Blusa Decote Degagê Malha do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Malha | Composição: 96% Poliéster | 4% Elastano",
+    code: 'AURORE-098',
+    name: "Tshirt Iris",
+    slug: 'tshirt-iris-aurore-098',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "T-shirt",
+    price: 218.00,
+    description: "T-shirt Iris em algodão com ombreira.",
+    composition: "Algodão",
     images: [
-      "assets/esmeral/39244-1.jpg"
+      'assets/aurore/AURORE-098-3.jpg',
+      'assets/aurore/AURORE-099-1.jpg',
+      'assets/aurore/AURORE-098-2.jpg',
     ],
     colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Amarelo", hex: "#F4D76B" },
+      { name: "Azul Claro", hex: '#BDD9F0' },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 85,
-    code: "39607",
-    name: "Calça Jeans New Baggy Balloon",
-    slug: "calca-jeans-new-baggy-balloon",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Calça",
-    price: 537.80,
-    description: "Calça Jeans New Baggy Balloon do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans | Composição: 100% Algodão",
+    code: 'AURORE-099',
+    name: "Saia Celine",
+    slug: 'saia-celine-aurore-099',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Saia",
+    price: 439.80,
+    description: "Saia Celine em guipir de algodão.",
+    composition: "Guipir em algodão",
     images: [
-      "assets/esmeral/39607-1.jpg"
+      'assets/aurore/AURORE-099-2.jpg',
     ],
     colors: [
-      { name: "Azul Médio", hex: "#3E668C" },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["34", "36", "38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 86,
-    code: "39617",
-    name: "Blusa Degagê Malha",
-    slug: "blusa-degage-malha",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Blusa",
-    price: 259.80,
-    description: "Blusa Degagê Malha do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Malha | Composição: 87% Poliamida | 13% Elastano",
+    code: 'AURORE-100',
+    name: "Vestido Kelly",
+    slug: 'vestido-kelly-aurore-100',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Vestido",
+    price: 599.80,
+    description: "Vestido Kelly em tricot listrado com babados.",
+    composition: "Tricot",
     images: [
-      "assets/esmeral/39617-1.jpg"
+      'assets/aurore/AURORE-100-2.jpg',
+      'assets/aurore/AURORE-100-3.jpg',
+      'assets/aurore/AURORE-100-4.jpg',
     ],
     colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Preto", hex: "#111111" },
-      { name: "Amarelo", hex: "#F4D76B" },
+      { name: "Preto", hex: '#111111' },
+      { name: "Bege", hex: '#D8C4A8' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 87,
-    code: "39632",
-    name: "Blusa Balonê Vichy",
-    slug: "blusa-balone-vichy",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    code: 'AURORE-101',
+    name: "Blusa Nicole",
+    slug: 'blusa-nicole-aurore-101',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
     category: "Blusa",
-    price: 199.80,
-    description: "Blusa Balonê Vichy do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Tricoline | Composição: 100% Algodão",
+    price: 339.80,
+    description: "Blusa Nicole sem alças em alfaiataria de viscose.",
+    composition: "Alfaiataria de viscose",
     images: [
-      "assets/esmeral/39632-1.jpg"
+      'assets/aurore/AURORE-101-2.jpg',
+      'assets/aurore/AURORE-101-3.jpg',
+      'assets/aurore/AURORE-101-4.jpg',
+      'assets/aurore/AURORE-101-5.jpg',
     ],
     colors: [
-      { name: "Azul", hex: "#7FA8D8" },
-      { name: "Marinho", hex: "#0B1F3A" },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Bege", hex: '#D8C4A8' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 88,
-    code: "39658",
-    name: "Saia Curta Detalhe Nó",
-    slug: "saia-curta-detalhe-no",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Saia",
-    price: 299.80,
-    description: "Saia Curta Detalhe Nó do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Liocel | Composição: 60% Liocel | 40% Algodão",
+    code: 'AURORE-102',
+    name: "Shorts Saia Nicole",
+    slug: 'shorts-saia-nicole-aurore-102',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Shorts Saia",
+    price: 279.80,
+    description: "Shorts-saia Nicole em alfaiataria de viscose.",
+    composition: "Alfaiataria de viscose",
     images: [
-      "assets/esmeral/39658-1.jpg"
+      'assets/aurore/AURORE-102-2.jpg',
+      'assets/aurore/AURORE-102-1.jpg',
+      'assets/aurore/AURORE-102-3.jpg',
     ],
     colors: [
-      { name: "Caramelo", hex: "#B6793C" },
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Off White", hex: "#F8F3EA" },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Bege", hex: '#D8C4A8' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 89,
-    code: "39639",
-    name: "Blusa Um Ombro Vichy",
-    slug: "blusa-um-ombro-vichy",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Blusa",
-    price: 239.80,
-    description: "Blusa Um Ombro Vichy do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Tricoline | Composição: 100% Algodão",
+    code: 'AURORE-103',
+    name: "Calça Nicole",
+    slug: 'calca-nicole-aurore-103',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Calça",
+    price: 359.80,
+    description: "Calça Nicole em alfaiataria de viscose.",
+    composition: "Alfaiataria de viscose",
     images: [
-      "assets/esmeral/39639-1.jpg"
+      'assets/aurore/AURORE-103-2.jpg',
+      'assets/aurore/AURORE-103-3.jpg',
+      'assets/aurore/AURORE-103-4.jpg',
+      'assets/aurore/AURORE-103-5.jpg',
     ],
     colors: [
-      { name: "Azul", hex: "#7FA8D8" },
-      { name: "Marinho", hex: "#0B1F3A" },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Bege", hex: '#D8C4A8' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 90,
-    code: "39610",
-    name: "Calça Jeans Basic Reta",
-    slug: "calca-jeans-basic-reta",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Calça",
-    price: 399.80,
-    description: "Calça Jeans Basic Reta do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans | Composição: 100% Algodão",
+    code: 'AURORE-104',
+    name: "Blusa Paloma",
+    slug: 'blusa-paloma-aurore-104',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Blusa",
+    price: 319.80,
+    description: "Blusa Paloma em ramiê com algodão, com amarração nas costas.",
+    composition: "Ramiê com algodão",
     images: [
-      "assets/esmeral/39610-1.jpg"
+      'assets/aurore/AURORE-104-2.jpg',
+      'assets/aurore/AURORE-104-3.jpg',
+      'assets/aurore/AURORE-104-4.jpg',
     ],
     colors: [
-      { name: "Azul Médio", hex: "#3E668C" },
+      { name: "Amarelo", hex: '#F5DF8A' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["34", "36", "38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 91,
-    code: "39224",
-    name: "Calça Jeans Mom",
-    slug: "calca-jeans-mom",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Calça",
-    price: 359.80,
-    description: "Calça Jeans Mom do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans | Composição: 100% Algodão",
+    code: 'AURORE-105',
+    name: "Conjunto Giovana",
+    slug: 'conjunto-giovana-aurore-105',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Conjunto",
+    price: 599.80,
+    description: "Conjunto Giovana em alfaiataria Brunello.",
+    composition: "Alfaiataria Brunello",
     images: [
-      "assets/esmeral/39224-1.jpg"
+      'assets/aurore/AURORE-105-2.jpg',
+      'assets/aurore/AURORE-105-3.jpg',
+      'assets/aurore/AURORE-105-4.jpg',
     ],
     colors: [
-      { name: "Azul Médio", hex: "#3E668C" },
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Bege", hex: '#E2D3BF' },
+      { name: "Preto", hex: '#111111' },
     ],
-    sizes: ["34", "36", "38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 92,
-    code: "39571",
-    name: "Saia Mini com Bolsos",
-    slug: "saia-mini-com-bolsos",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Saia",
-    price: 379.80,
-    description: "Saia Mini com Bolsos do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Alfaiataria",
+    code: 'AURORE-106',
+    name: "Conjunto Zoe",
+    slug: 'conjunto-zoe-aurore-106',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Conjunto",
+    price: 559.80,
+    description: "Conjunto Zoe em alfaiataria Sensoriale.",
+    composition: "Alfaiataria Sensoriale",
     images: [
-      "assets/esmeral/39571-1.jpg"
+      'assets/aurore/AURORE-106-2.jpg',
+      'assets/aurore/AURORE-106-3.jpg',
+      'assets/aurore/AURORE-106-4.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Amarelo Claro", hex: '#F4DE9A' },
+      { name: "Rosa", hex: '#C86E87' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 93,
-    code: "39614",
-    name: "Blusa Gola Alta Rib",
-    slug: "blusa-gola-alta-rib",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Blusa",
-    price: 179.80,
-    description: "Blusa Gola Alta Rib do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Canelado",
+    code: 'AURORE-107',
+    name: "Vestido Yve",
+    slug: 'vestido-yve-aurore-107',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Vestido",
+    price: 559.80,
+    description: "Vestido Yve em poliamida com elastano.",
+    composition: "Poliamida com elastano",
     images: [
-      "assets/esmeral/39614-1.jpg"
+      'assets/aurore/AURORE-107-2.jpg',
+      'assets/aurore/AURORE-107-3.jpg',
+      'assets/aurore/AURORE-107-4.jpg',
+      'assets/aurore/AURORE-107-5.jpg',
+      'assets/aurore/AURORE-108-1.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Azul Claro", hex: '#B8D8F2' },
+      { name: "Vermelho", hex: '#C8102E' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["P", "M", "G"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 94,
-    code: "39675",
-    name: "Calça Balloon Black Poá",
-    slug: "calca-balloon-black-poa",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Calça",
-    price: 459.80,
-    description: "Calça Balloon Black Poá do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans",
+    code: 'AURORE-108',
+    name: "Vestido Ayla",
+    slug: 'vestido-ayla-aurore-108',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Vestido",
+    price: 559.80,
+    description: "Vestido Ayla em malha de viscose, com corpo preto e saia contrastante.",
+    composition: "Malha de viscose",
     images: [
-      "assets/esmeral/39675-1.jpg"
+      'assets/aurore/AURORE-108-2.jpg',
+      'assets/aurore/AURORE-108-3.jpg',
+      'assets/aurore/AURORE-108-4.jpg',
+      'assets/aurore/AURORE-109-1.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Off com Preto", hex: '#F8F3EA' },
+      { name: "Marrom com Preto", hex: '#5B3528' },
     ],
-    sizes: ["34", "36", "38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 95,
-    code: "39671",
-    name: "Calça Jeans Extra Wide",
-    slug: "calca-jeans-extra-wide",
-    brand: "esmeral",
-    catalog: "Summer Dream",
-    category: "Calça",
-    price: 459.80,
-    description: "Calça Jeans Extra Wide do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans",
+    code: 'AURORE-109',
+    name: "Túnica Agnes",
+    slug: 'tunica-agnes-aurore-109',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Túnica",
+    price: 259.80,
+    description: "Túnica Agnes em alfaiataria Daikiri, com amarração na frente ou nas costas.",
+    composition: "Alfaiataria Daikiri",
     images: [
-      "assets/esmeral/39671-1.jpg"
+      'assets/aurore/AURORE-109-2.jpg',
+      'assets/aurore/AURORE-109-3.jpg',
+      'assets/aurore/AURORE-109-4.jpg',
+      'assets/aurore/AURORE-109-5.jpg',
+      'assets/aurore/AURORE-110-1.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Amarelo", hex: '#F2D77E' },
+      { name: "Marrom", hex: '#6A4739' },
     ],
-    sizes: ["36", "38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 96,
-    code: "39595",
-    name: "Calça New Reta",
-    slug: "calca-new-reta",
-    brand: "esmeral",
-    catalog: "Summer Dream",
+    code: 'AURORE-110',
+    name: "Calça Agnes",
+    slug: 'calca-agnes-aurore-110',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
     category: "Calça",
-    price: 499.80,
-    description: "Calça New Reta do catálogo Summer Dream Parte I 03 08.",
-    composition: "Tecido: Jeans",
+    price: 319.80,
+    description: "Calça Agnes em alfaiataria Daikiri, utilizável como pantalona ou balloon com amarração.",
+    composition: "Alfaiataria Daikiri",
     images: [
-      "assets/esmeral/39595-1.jpg"
+      'assets/aurore/AURORE-110-2.jpg',
+      'assets/aurore/AURORE-110-3.jpg',
+      'assets/aurore/AURORE-110-4.jpg',
+      'assets/aurore/AURORE-110-5.jpg',
+      'assets/aurore/AURORE-111-1.jpg',
     ],
     colors: [
-      { name: "Não informado", hex: "#D9D9D9" },
+      { name: "Amarelo", hex: '#F2D77E' },
+      { name: "Marrom", hex: '#6A4739' },
     ],
-    sizes: ["38", "40", "42"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 97,
-    code: "AURORE-097",
-    name: "Conjunto Amanda",
-    slug: "conjunto-amanda",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Conjunto",
-    price: 619.80,
-    description: "Conjunto Amanda do catálogo The Meeting.",
-    composition: "Alfaiataria Twil",
+    code: 'AURORE-111',
+    name: "Blusa Emili",
+    slug: 'blusa-emili-aurore-111',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Blusa",
+    price: 279.80,
+    description: "Blusa Emili em malha de viscose com faixa lateral.",
+    composition: "Malha de viscose",
     images: [
-      "assets/aurore/aurore-097-1.jpg"
+      'assets/aurore/AURORE-111-2.jpg',
+      'assets/aurore/AURORE-111-3.jpg',
+      'assets/aurore/AURORE-112-1.jpg',
     ],
     colors: [
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Rosa", hex: "#F7C9D8" }
+      { name: "Off", hex: '#F8F3EA' },
+      { name: "Marrom", hex: '#5A382E' },
+      { name: "Preto", hex: '#111111' },
+      { name: "Vermelho", hex: '#B50F24' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 98,
-    code: "AURORE-098",
-    name: "Tshirt Iris",
-    slug: "tshirt-iris",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "T-shirt",
-    price: 218.00,
-    description: "Tshirt Iris com ombreira do catálogo The Meeting.",
-    composition: "Algodão",
+    code: 'AURORE-112',
+    name: "Calça Maya",
+    slug: 'calca-maya-aurore-112',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Calça",
+    price: 457.80,
+    description: "Calça Maya listrada em sarja de algodão.",
+    composition: "Sarja de algodão",
     images: [
-      "assets/aurore/aurore-098-1.jpg"
+      'assets/aurore/AURORE-112-2.jpg',
+      'assets/aurore/AURORE-112-3.jpg',
+      'assets/aurore/AURORE-112-4.jpg',
+      'assets/aurore/AURORE-113-1.jpg',
     ],
     colors: [
-      { name: "Azul Claro", hex: "#BFDDF5" },
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Preto", hex: "#111111" }
+      { name: "Verde com Off", hex: '#7A8030' },
+      { name: "Vermelho com Off", hex: '#9F1725' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 99,
-    code: "AURORE-099",
-    name: "Saia Celine",
-    slug: "saia-celine",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Saia",
-    price: 439.80,
-    description: "Saia Celine do catálogo The Meeting.",
-    composition: "Guipir em Algodão",
+    code: 'AURORE-113',
+    name: "Blusa Eloa",
+    slug: 'blusa-eloa-aurore-113',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Blusa",
+    price: 299.80,
+    description: "Blusa Eloa franzida em crepe com elastano.",
+    composition: "Crepe com elastano",
     images: [
-      "assets/aurore/aurore-099-1.jpg"
+      'assets/aurore/AURORE-113-2.jpg',
+      'assets/aurore/AURORE-114-1.jpg',
     ],
     colors: [
-      { name: "Off", hex: "#F8F3EA" }
+      { name: "Rosa", hex: '#F2C4CF' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 100,
-    code: "AURORE-100",
-    name: "Vestido Kelly",
-    slug: "vestido-kelly",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Vestido",
-    price: 599.80,
-    description: "Vestido Kelly do catálogo The Meeting.",
-    composition: "Tricot",
+    code: 'AURORE-114',
+    name: "Calça Jeans Gabi",
+    slug: 'calca-jeans-gabi-aurore-114',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Calça",
+    price: 439.80,
+    description: "Calça Jeans Gabi em jeans 100% algodão.",
+    composition: "Jeans 100% algodão",
     images: [
-      "assets/aurore/aurore-100-1.jpg"
+      'assets/aurore/AURORE-114-2.jpg',
+      'assets/aurore/AURORE-114-3.jpg',
     ],
     colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Bege", hex: "#D9C8AD" }
+      { name: "Azul", hex: '#6F8FB5' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 101,
-    code: "AURORE-101",
-    name: "Blusa Nicole",
-    slug: "blusa-nicole",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Blusa",
-    price: 339.80,
-    description: "Blusa Nicole do catálogo The Meeting.",
-    composition: "Alfaiataria de Viscose",
+    code: 'AURORE-115',
+    name: "Body Paula",
+    slug: 'body-paula-aurore-115',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Body",
+    price: 199.80,
+    description: "Body Paula em poliamida com elastano.",
+    composition: "Poliamida com elastano",
     images: [
-      "assets/aurore/aurore-101-1.jpg"
+      'assets/aurore/AURORE-114-3.jpg',
     ],
     colors: [
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Bege", hex: "#D9C8AD" }
+      { name: "Preto", hex: '#111111' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 102,
-    code: "AURORE-102",
-    name: "Shorts Saia Nicole",
-    slug: "shorts-saia-nicole",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Shorts Saia",
-    price: 279.80,
-    description: "Shorts Saia Nicole do catálogo The Meeting.",
-    composition: "Alfaiataria de Viscose",
+    code: 'AURORE-116',
+    name: "Camisa Barbara",
+    slug: 'camisa-barbara-aurore-116',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Camisa",
+    price: 319.80,
+    description: "Camisa Barbara em alfaiataria Maloni, com faixa para amarração.",
+    composition: "Alfaiataria Maloni",
     images: [
-      "assets/aurore/aurore-102-1.jpg"
+      'assets/aurore/AURORE-116-2.jpg',
+      'assets/aurore/AURORE-116-3.jpg',
+      'assets/aurore/AURORE-117-1.jpg',
     ],
     colors: [
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Bege", hex: "#D9C8AD" }
+      { name: "Preto", hex: '#111111' },
+      { name: "Bege", hex: '#D8C1A9' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 103,
-    code: "AURORE-103",
-    name: "Calça Nicole",
-    slug: "calca-nicole",
-    brand: "aurore",
-    catalog: "The Meeting",
+    code: 'AURORE-117',
+    name: "Calça Angela",
+    slug: 'calca-angela-aurore-117',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
     category: "Calça",
-    price: 359.80,
-    description: "Calça Nicole do catálogo The Meeting.",
-    composition: "Alfaiataria de Viscose",
+    price: 339.80,
+    description: "Calça Angela em alfaiataria Maloni.",
+    composition: "Alfaiataria Maloni",
     images: [
-      "assets/aurore/aurore-103-1.jpg"
+      'assets/aurore/AURORE-117-2.jpg',
+      'assets/aurore/AURORE-117-3.jpg',
+      'assets/aurore/AURORE-118-1.jpg',
     ],
     colors: [
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Bege", hex: "#D9C8AD" }
+      { name: "Preto", hex: '#111111' },
+      { name: "Bege", hex: '#D8C1A9' },
+      { name: "Off", hex: '#F8F3EA' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 104,
-    code: "AURORE-104",
-    name: "Blusa Paloma",
-    slug: "blusa-paloma",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Blusa",
-    price: 319.80,
-    description: "Blusa Paloma do catálogo The Meeting.",
-    composition: "Ramie com Algodão",
+    code: 'AURORE-118',
+    name: "Calça Aline Poá",
+    slug: 'calca-aline-poa-aurore-118',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Calça",
+    price: 359.80,
+    description: "Calça Aline Poá em alfaiataria Marrant.",
+    composition: "Alfaiataria Marrant",
     images: [
-      "assets/aurore/aurore-104-1.jpg"
+      'assets/aurore/AURORE-118-2.jpg',
     ],
     colors: [
-      { name: "Amarelo", hex: "#F6E8A6" },
-      { name: "Off", hex: "#F8F3EA" }
+      { name: "Bege com Poá Off", hex: '#DCC8B5' },
+      { name: "Marrom com Poá Preto", hex: '#7A4B34' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 105,
-    code: "AURORE-105",
-    name: "Conjunto Giovana",
-    slug: "conjunto-giovana",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Conjunto",
-    price: 599.80,
-    description: "Conjunto Giovana do catálogo The Meeting.",
-    composition: "Alfaiataria Brunello",
+    code: 'AURORE-119',
+    name: "Top Poá Jade",
+    slug: 'top-poa-jade-aurore-119',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Top",
+    price: 279.80,
+    description: "Top Poá Jade sem alças em alfaiataria Marrant.",
+    composition: "Alfaiataria Marrant",
     images: [
-      "assets/aurore/aurore-105-1.jpg"
+      'assets/aurore/AURORE-119-2.jpg',
     ],
     colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Bege", hex: "#D9C8AD" },
-      { name: "Off", hex: "#F8F3EA" }
+      { name: "Bege com Poá Off", hex: '#DCC8B5' },
+      { name: "Marrom com Poá Preto", hex: '#7A4B34' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 106,
-    code: "AURORE-106",
-    name: "Conjunto Zoe",
-    slug: "conjunto-zoe",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Conjunto",
-    price: 559.80,
-    description: "Conjunto Zoe do catálogo The Meeting.",
-    composition: "Alfaiataria Sensoriale",
+    code: 'AURORE-120',
+    name: "Vestido Mariana",
+    slug: 'vestido-mariana-aurore-120',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Vestido",
+    price: 419.80,
+    description: "Vestido Mariana assimétrico em viscose mista.",
+    composition: "Viscose mista",
     images: [
-      "assets/aurore/aurore-106-1.jpg"
+      'assets/aurore/AURORE-120-2.jpg',
+      'assets/aurore/AURORE-120-3.jpg',
     ],
     colors: [
-      { name: "Creme", hex: "#F7E9CF" },
-      { name: "Rosa", hex: "#C96D84" }
+      { name: "Amarelo", hex: '#F5DE73' },
+      { name: "Azul Claro", hex: '#9FC7EF' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 107,
-    code: "AURORE-107",
-    name: "Vestido Yve",
-    slug: "vestido-yve",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Vestido",
-    price: 559.80,
-    description: "Vestido Yve do catálogo The Meeting.",
-    composition: "Poliamida com Elastano",
+    code: 'AURORE-121',
+    name: "Blusa Mariana",
+    slug: 'blusa-mariana-aurore-121',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
+    category: "Blusa",
+    price: 259.80,
+    description: "Blusa Mariana em viscose mista, com mangas amplas.",
+    composition: "Viscose mista",
     images: [
-      "assets/aurore/aurore-107-1.jpg"
+      'assets/aurore/AURORE-121-2.jpg',
+      'assets/aurore/AURORE-121-3.jpg',
+      'assets/aurore/AURORE-121-4.jpg',
     ],
     colors: [
-      { name: "Azul Claro", hex: "#BFDDF5" },
-      { name: "Vermelho", hex: "#C62828" },
-      { name: "Off", hex: "#F8F3EA" }
+      { name: "Amarelo", hex: '#F5DE73' },
+      { name: "Rosa", hex: '#F3A9B7' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
+    createdAt: '2026-08-03',
   },
   {
     id: 108,
-    code: "AURORE-108",
-    name: "Vestido Ayla",
-    slug: "vestido-ayla",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Vestido",
-    price: 559.80,
-    description: "Vestido Ayla do catálogo The Meeting.",
-    composition: "Malha de Viscose",
-    images: [
-      "assets/aurore/aurore-108-1.jpg"
-    ],
-    colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Marrom", hex: "#6B3F2A" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 109,
-    code: "AURORE-109",
-    name: "Túnica Agnes",
-    slug: "tunica-agnes",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Túnica",
-    price: 259.80,
-    description: "Túnica Agnes do catálogo The Meeting. A blusa pode ser usada com amarração na frente ou nas costas.",
-    composition: "Alfaiataria Daikiri",
-    images: [
-      "assets/aurore/aurore-109-1.jpg"
-    ],
-    colors: [
-      { name: "Manteiga", hex: "#F6E8A6" },
-      { name: "Marrom", hex: "#6B3F2A" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 110,
-    code: "AURORE-110",
-    name: "Calça Agnes",
-    slug: "calca-agnes",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Calça",
-    price: 319.80,
-    description: "Calça Agnes do catálogo The Meeting. Pode ser usada como pantalona ou ballon com amarração.",
-    composition: "Alfaiataria Daikiri",
-    images: [
-      "assets/aurore/aurore-110-1.jpg"
-    ],
-    colors: [
-      { name: "Manteiga", hex: "#F6E8A6" },
-      { name: "Marrom", hex: "#6B3F2A" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 111,
-    code: "AURORE-111",
-    name: "Blusa Emili",
-    slug: "blusa-emili",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Blusa",
-    price: 279.80,
-    description: "Blusa Emili do catálogo The Meeting.",
-    composition: "Malha de Viscose",
-    images: [
-      "assets/aurore/aurore-111-1.jpg"
-    ],
-    colors: [
-      { name: "Off", hex: "#F8F3EA" },
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Preto", hex: "#111111" },
-      { name: "Vermelho", hex: "#C62828" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 112,
-    code: "AURORE-112",
-    name: "Calça Maya",
-    slug: "calca-maya",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Calça",
-    price: 457.80,
-    description: "Calça Maya do catálogo The Meeting.",
-    composition: "Sarja de Algodão",
-    images: [
-      "assets/aurore/aurore-112-1.jpg"
-    ],
-    colors: [
-      { name: "Verde", hex: "#6B7D1F" },
-      { name: "Vermelho", hex: "#8B0000" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 113,
-    code: "AURORE-113",
-    name: "Blusa Eloa",
-    slug: "blusa-eloa",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Blusa",
-    price: 299.80,
-    description: "Blusa Eloa do catálogo The Meeting.",
-    composition: "Crepe com Elastano",
-    images: [
-      "assets/aurore/aurore-113-1.jpg"
-    ],
-    colors: [
-      { name: "Rosa", hex: "#F7C9D8" },
-      { name: "Off", hex: "#F8F3EA" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 114,
-    code: "AURORE-114",
-    name: "Calça Jeans Gabi",
-    slug: "calca-jeans-gabi",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Calça",
-    price: 439.80,
-    description: "Calça Jeans Gabi do catálogo The Meeting.",
-    composition: "Jeans 100% Algodão",
-    images: [
-      "assets/aurore/aurore-114-1.jpg"
-    ],
-    colors: [
-      { name: "Denim", hex: "#4D6F95" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 115,
-    code: "AURORE-115",
-    name: "Body Paula",
-    slug: "body-paula",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Body",
-    price: 199.80,
-    description: "Body Paula do catálogo The Meeting.",
-    composition: "Poliamida com Elastano",
-    images: [
-      "assets/aurore/aurore-115-1.jpg"
-    ],
-    colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Off", hex: "#F8F3EA" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 116,
-    code: "AURORE-116",
-    name: "Camisa Barbara",
-    slug: "camisa-barbara",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Camisa",
-    price: 319.80,
-    description: "Camisa Barbara do catálogo The Meeting.",
-    composition: "Alfaiataria Maloni",
-    images: [
-      "assets/aurore/aurore-116-1.jpg"
-    ],
-    colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Caqui", hex: "#CDB79E" },
-      { name: "Off", hex: "#F8F3EA" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 117,
-    code: "AURORE-117",
-    name: "Calça Angela",
-    slug: "calca-angela",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Calça",
-    price: 339.80,
-    description: "Calça Angela do catálogo The Meeting.",
-    composition: "Alfaiataria Maloni",
-    images: [
-      "assets/aurore/aurore-117-1.jpg"
-    ],
-    colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Caqui", hex: "#CDB79E" },
-      { name: "Off", hex: "#F8F3EA" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 118,
-    code: "AURORE-118",
-    name: "Calça Aline Poá",
-    slug: "calca-aline-poa",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Calça",
-    price: 359.80,
-    description: "Calça Aline Poá do catálogo The Meeting.",
-    composition: "Alfaiataria Marrant",
-    images: [
-      "assets/aurore/aurore-118-1.jpg"
-    ],
-    colors: [
-      { name: "Marrom", hex: "#6B3F2A" },
-      { name: "Bege", hex: "#D9C8AD" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 119,
-    code: "AURORE-119",
-    name: "Top Poá Jade",
-    slug: "top-poa-jade",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Top",
-    price: 279.80,
-    description: "Top Poá Jade do catálogo The Meeting.",
-    composition: "Alfaiataria Marrant",
-    images: [
-      "assets/aurore/aurore-119-1.jpg"
-    ],
-    colors: [
-      { name: "Preto", hex: "#111111" },
-      { name: "Caqui", hex: "#CDB79E" },
-      { name: "Off", hex: "#F8F3EA" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 120,
-    code: "AURORE-120",
-    name: "Vestido Mariana",
-    slug: "vestido-mariana",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Vestido",
-    price: 419.80,
-    description: "Vestido Mariana do catálogo The Meeting.",
-    composition: "Viscose Mista",
-    images: [
-      "assets/aurore/aurore-120-1.jpg"
-    ],
-    colors: [
-      { name: "Amarelo", hex: "#F6E8A6" },
-      { name: "Azul Claro", hex: "#BFDDF5" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 121,
-    code: "AURORE-121",
-    name: "Blusa Mariana",
-    slug: "blusa-mariana",
-    brand: "aurore",
-    catalog: "The Meeting",
-    category: "Blusa",
-    price: 259.80,
-    description: "Blusa Mariana do catálogo The Meeting.",
-    composition: "Viscose Mista",
-    images: [
-      "assets/aurore/aurore-121-1.jpg"
-    ],
-    colors: [
-      { name: "Amarelo", hex: "#F6E8A6" },
-      { name: "Rosa", hex: "#F7C9D8" }
-    ],
-    sizes: ["PP", "P", "M"],
-    stock: 5,
-    isActive: true,
-    createdAt: "2026-08-03"
-  },
-  {
-    id: 122,
-    code: "AURORE-122",
+    code: 'AURORE-122',
     name: "Saia Mariana",
-    slug: "saia-mariana",
-    brand: "aurore",
-    catalog: "The Meeting",
+    slug: 'saia-mariana-aurore-122',
+    brand: 'Aurore',
+    catalog: 'The Meeting',
     category: "Saia",
     price: 279.80,
-    description: "Saia Mariana do catálogo The Meeting.",
-    composition: "Viscose Mista",
+    description: "Saia Mariana em viscose mista, com camadas.",
+    composition: "Viscose mista",
     images: [
-      "assets/aurore/aurore-122-1.jpg"
+      'assets/aurore/AURORE-122-3.jpg',
+      'assets/aurore/AURORE-122-2.jpg',
+      'assets/aurore/AURORE-122-4.jpg',
     ],
     colors: [
-      { name: "Amarelo", hex: "#F6E8A6" },
-      { name: "Rosa", hex: "#F7C9D8" }
+      { name: "Amarelo", hex: '#F5DE73' },
+      { name: "Rosa", hex: '#F3A9B7' },
     ],
-    sizes: ["PP", "P", "M"],
+    sizes: ['PP', 'P', 'M'],
     stock: 5,
     isActive: true,
-    createdAt: "2026-08-03"
-  }
+    createdAt: '2026-08-03',
+  },
 ];

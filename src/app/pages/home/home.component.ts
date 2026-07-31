@@ -21,30 +21,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   readonly slides = [
     { 
+      image: 'assets/mysk/11012-2.jpg', 
+      alt: 'Travels - Laura Dellagnese',
+      link: '/catalogo/mysk/Travels - Laura Dellagnese' 
+    },
+    { 
+      image: 'assets/aurore/AURORE-097-3.jpg', 
+      alt: 'The Meeting', 
+      link: '/catalogo/aurore/The Meeting'
+    },
+    { 
       image: 'assets/esmeral/38789-3.jpg', 
-      alt: 'Catálogo Summer Dream',
-      link: '/catalogo/esmeral/Summer Dream' 
-    },
-    { 
-      image: 'assets/esmeral/39513-1.jpg', 
-      alt: 'Summer Dream', 
-      link: '/catalogo/esmeral/Summer Dream'
-    },
-    { 
-      image: 'assets/esmeral/39735-1.jpg', 
       alt: 'Summer Dream', 
       link: '/catalogo/esmeral/Summer Dream'
     }
   ];
 
   private readonly heroImages = [
-    'assets/esmeral/39735-1.jpg',
-    'assets/mysk/11012-2.jpg',
-    'assets/msyk/11038-2.jpg',
     'assets/kaele/8077-2.jpg',
-    'assets/kaele/8078-2.jpg',
-    'assets/esmeral/39519-2.jpg',
-    'assets/esmeral/39540-2.jpg'
+    'assets/kaele/8078-3.jpg',
+    'assets/kaele/8098-3.jpg',
+    'assets/kaele/8123-3.jpg',
+    'assets/kaele/8104-3.jpg',
+    'assets/kaele/8176-5.jpg',
+    'assets/kaele/8095-2.jpg'
   ];
 
   readonly heroSlides = [...this.heroImages, ...this.heroImages];

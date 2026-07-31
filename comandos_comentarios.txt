@@ -3,8 +3,11 @@ se eu quiser excluir algum catalogo:
 tiro o link do header e menu
 excluo todos os produtos do catálogo em product.mock.ts
 se eu quiser adicionar:
-adicona os links no header e menu
+adicona os links no header, menu e carrosel
 adiciona todos os produtos do catálogo em product.mock.ts
+
+ajustar catálogo esmeral porque ta incorreto as imagens com os nomes das roupas
+colocar imagem da modelo primeiro
 
 C:\Users\ghmil\OneDrive\Documentos\lalastorevip\
 

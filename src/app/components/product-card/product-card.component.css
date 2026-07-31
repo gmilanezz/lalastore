@@ -17,9 +17,10 @@
 
 .product-card img {
   display: block;
+  width: 100%;
   height: 410px;
   object-fit: cover;
-  width: 100%;
+  object-position: top;
 }
 
 .product-info {
@@ -62,10 +63,4 @@
 .btn-ver-mais:hover {
   background: #F7E9CF;
   color: #4A035F;
-}
-
-@media (max-width: 768px) {
-  .product-card img {
-    height: 340px;
-  }
 }
