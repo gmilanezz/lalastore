@@ -13,6 +13,7 @@
   color: #777;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  margin-top: -20px;
 }
 
 .breadcrumb-link {
@@ -79,7 +80,7 @@
 .quantity-controls button,
 .remove {
   background: #fff;
-  border: 2px solid #4A035F;
+  border: 1px solid #4A035F;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 800;
