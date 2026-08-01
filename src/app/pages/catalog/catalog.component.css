@@ -56,6 +56,8 @@
   border: 1px solid rgba(74, 3, 95, 0.18);
   font: inherit;
   padding: 0.6rem 1rem;
+  appearance: auto;
+  -webkit-appearance: auto;
 }
 
 .filters button,
@@ -99,13 +101,18 @@
   .filters {
     grid-template-columns: 1fr;
   }
-  .catalog-grid{
+
+  .filters button{
+    margin-top: 5px;
+  }
+
+  .catalog-grid {
     max-width: 90%;
   }
 }
 
 @media (max-width: 1200px) {
-  .catalog-grid{
+  .catalog-grid {
     max-width: 80%;
   }
 }

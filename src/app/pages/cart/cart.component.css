@@ -79,21 +79,17 @@
 .quantity-controls button,
 .remove {
   background: #fff;
-  border: 0.6px solid #4A035F;
+  border: 2px solid #4A035F;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 800;
   padding: 0.5rem 0.8rem;
+  color: #4A035F;
 }
 
 .remove {
   color: #9c1f2e;
   font-weight: 500;
-}
-
-.remove:hover {
-  color: #fff;
-  background-color: #9c1f2e;
 }
 
 .cart-summary-inline {
