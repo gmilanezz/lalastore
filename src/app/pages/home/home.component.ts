@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       link: '/catalogo/aurore/The Meeting'
     },
     { 
-      image: 'assets/esmeral/38789-3.jpg', 
+      image: 'assets/esmeral/summer-dream/38789-3.jpg', 
       alt: 'Summer Dream', 
       link: '/catalogo/esmeral/Summer Dream'
     }
