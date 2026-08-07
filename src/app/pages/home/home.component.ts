@@ -20,20 +20,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   activeAccordion: string | null = null;
 
   readonly slides = [
-    { 
-      image: 'assets/mysk/11012-2.jpg', 
-      alt: 'Travels - Laura Dellagnese',
-      link: '/catalogo/mysk/Travels - Laura Dellagnese' 
+    {
+      image: 'assets/esmeral/a-summer/img1.jpg',
+      alt: 'A Summer with Nat Bars',
+      link: '/catalogo/esmeral/A Summer with Nat Bars'
     },
-    { 
-      image: 'assets/aurore/AURORE-097-3.jpg', 
-      alt: 'The Meeting', 
-      link: '/catalogo/aurore/The Meeting'
+    {
+      image: 'assets/esmeral/a-summer/img2.jpg',
+      alt: 'A Summer with Nat Bars',
+      link: '/catalogo/esmeral/A Summer with Nat Bars'
     },
-    { 
-      image: 'assets/esmeral/summer-dream/38789-3.jpg', 
-      alt: 'Summer Dream', 
-      link: '/catalogo/esmeral/Summer Dream'
+    {
+      image: 'assets/esmeral/a-summer/img3.jpg',
+      alt: 'A Summer with Nat Bars',
+      link: '/catalogo/esmeral/A Summer with Nat Bars'
     }
   ];
 
@@ -51,10 +51,20 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private intervalId: number | undefined;
 
-  constructor(private readonly productService: ProductService) {}
+  constructor(private readonly productService: ProductService) { }
 
   ngOnInit(): void {
-    this.featuredProducts = this.productService.getFeaturedProducts(8);
+    this.featuredProducts = this.productService
+      .getProducts()
+      .filter((product) =>
+        product.brand?.trim().toLowerCase() === 'esmeral' &&
+        product.catalog?.trim().toLowerCase() === 'a summer with nat bars' &&
+        product.isActive
+      )
+      .slice(0, 8);
+
+    console.log('Produtos A Summer with Nat Bars:', this.featuredProducts);
+
     this.startCarousel();
   }
 
