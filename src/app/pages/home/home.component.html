@@ -1,10 +1,10 @@
 <main>
-  <section class="carousel-section" aria-label="Destaques da loja">
+  <section class="carousel-section">
     <div class="carousel-container">
-      <a class="carousel-slide" *ngFor="let slide of slides; let index = index"
-        [ngClass]="{ active: activeSlide === index }" [routerLink]="slide.link"
-        [attr.aria-label]="'Ver peça ' + slide.alt">
-        <img [src]="slide.image" [alt]="slide.alt">
+      <a *ngFor="let slide of slides; let index = index" class="carousel-slide"
+        [ngClass]="{ active: activeSlide === index }" [routerLink]="slide.link" [attr.aria-label]="slide.alt"
+        [style.--desktop-image]="'url(' + slide.desktopImage + ')'"
+        [style.--mobile-image]="'url(' + slide.mobileImage + ')'">
       </a>
 
       <div class="carousel-indicators" aria-label="Controles do carrossel">
