@@ -61,6 +61,7 @@
 @media (max-width: 768px) {
   .carousel-slide {
     background-image: var(--mobile-image);
+    background-position: top center;
   }
 }
 
@@ -87,7 +88,6 @@
 .products-carousel {
   margin: 0 auto;
   max-width: 1500px;
-  padding: 0 48px;
   position: relative;
   width: 100%;
 }
@@ -96,12 +96,20 @@
   display: flex;
   gap: 25px;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 10px 0 10px;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
   margin-top: -10px;
+}
+
+.carousel-track app-product-card {
+  flex: 0 0 260px;
+  gap: 25px;
+  width: 290px;
+  min-width: 290px;
+  max-width: 290px;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -350,9 +358,13 @@
     align-items: center;
     display: flex;
     justify-content: center;
-  } .prev{
+  }
+
+  .prev {
     left: -60px;
-  } .next{
+  }
+
+  .next {
     right: -60px;
   }
 }
@@ -368,6 +380,7 @@
 
   .carousel-track {
     padding-bottom: 50px;
+    margin-top: -20px;
   }
 
   .carousel-track app-product-card {
