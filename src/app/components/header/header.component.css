@@ -24,7 +24,7 @@
 }
 
 .logo img {
-  height: 68px;
+  height: 50px;
   margin-top: 6px;
   object-fit: contain;
   width: auto;
@@ -136,13 +136,12 @@
   color: #4A035F;
   display: inline-flex;
   font-size: 0.72rem;
-  font-weight: 800;
-  height: 19px;
+  font-weight: 700;
   justify-content: center;
   position: absolute;
-  right: -4px;
+  right: -2px;
   top: -2px;
-  width: 19px;
+  width: 17px;
 }
 
 .hamburger {
@@ -288,7 +287,6 @@
 
 @media (max-width: 768px) {
   .logo img {
-    height: 66px;
     margin-left: 25px;
   }
 }

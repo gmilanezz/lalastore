@@ -882,7 +882,7 @@ export const MOCK_PRODUCTS: Product[] = [
     composition: "76% algodão, 22% poliéster e 2% elastano",
     images: [
       'assets/esmeral/summer-dream/39689-2.jpg',
-      'assets/esmeral/summer-dream/summer-dream/39689-1.jpg',
+      'assets/esmeral/summer-dream/39689-1.jpg',
     ],
     colors: [
       { name: "Bege", hex: '#C6A078' },

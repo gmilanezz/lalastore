@@ -39,7 +39,6 @@
 
       <div class="form-group">
         <label>Cor</label>
-
         <div class="options">
           <button type="button" *ngFor="let color of item.colors" [ngClass]="{ active: selectedColor === color.name }"
             (click)="selectedColor = color.name">
@@ -48,11 +47,7 @@
             {{ color.name }}
           </button>
         </div>
-      </div>
-
-      <div class="form-group">
         <label>Tamanho</label>
-
         <div class="options">
           <button type="button" *ngFor="let size of item.sizes" [ngClass]="{ active: selectedSize === size }"
             (click)="selectedSize = size">
@@ -60,7 +55,6 @@
           </button>
         </div>
       </div>
-
       <button class="btn-add-cart" type="button" [ngClass]="{ 'is-added': isAddedToCart }" (click)="addToCart()">
         {{ isAddedToCart ? 'Adicionado à sacola' : 'Adicionar à Sacola' }}
       </button>
@@ -70,11 +64,9 @@
   <ng-template #notFound>
     <section class="not-found">
       <h1>Produto não encontrado</h1>
-
       <p>
         O produto pode ter sido removido ou ainda não foi cadastrado.
       </p>
-
       <a routerLink="/">Voltar para o início</a>
     </section>
   </ng-template>
