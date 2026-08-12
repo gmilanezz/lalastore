@@ -60,7 +60,7 @@
   object-position: top;
   width: 100%;
   border: 2px solid #4A035F;
-  border-radius: 22px;
+  border-radius: 12px;
 }
 
 .thumbs {
@@ -230,6 +230,6 @@
     height: auto;
     justify-content: flex-start;
     overflow: visible;
-    padding: 2rem 3rem;
+    padding: .5rem 3rem 3rem;
   }
 }
