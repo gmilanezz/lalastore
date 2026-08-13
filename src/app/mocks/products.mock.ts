@@ -13,9 +13,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Elis do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel",
     images: [
-      "assets/Kaele/8154-3.jpg",
-      "assets/Kaele/8154-2.jpg",
-      "assets/Kaele/8154-1.jpg",
+      "assets/kaele/8154-3.jpg",
+      "assets/kaele/8154-2.jpg",
+      "assets/kaele/8154-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -39,7 +39,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Elis do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel",
     images: [
-      "assets/Kaele/8155-1.jpg",
+      "assets/kaele/8155-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -63,9 +63,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Fani do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscolinho",
     images: [
-      "assets/Kaele/8104-3.jpg",
-      "assets/Kaele/8104-2.jpg",
-      "assets/Kaele/8104-1.jpg",
+      "assets/kaele/8104-3.jpg",
+      "assets/kaele/8104-2.jpg",
+      "assets/kaele/8104-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -89,7 +89,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Fani do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscolinho",
     images: [
-      "assets/Kaele/8105-1.jpg",
+      "assets/kaele/8105-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -113,11 +113,11 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Algodão",
     images: [
-      "assets/Kaele/8095-5.jpg",
-      "assets/Kaele/8095-4.jpg",
-      "assets/Kaele/8095-3.jpg",
-      "assets/Kaele/8095-2.jpg",
-      "assets/Kaele/8095-1.jpg",
+      "assets/kaele/8095-5.jpg",
+      "assets/kaele/8095-4.jpg",
+      "assets/kaele/8095-3.jpg",
+      "assets/kaele/8095-2.jpg",
+      "assets/kaele/8095-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -140,7 +140,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Short Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Algodão",
     images: [
-      "assets/Kaele/8094-1.jpg",
+      "assets/kaele/8094-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -163,9 +163,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Francine do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/Kaele/8077-3.jpg",
-      "assets/Kaele/8077-2.jpg",
-      "assets/Kaele/8077-1.jpg",
+      "assets/kaele/8077-3.jpg",
+      "assets/kaele/8077-2.jpg",
+      "assets/kaele/8077-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -189,9 +189,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Francine do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/Kaele/8078-3.jpg",
-      "assets/Kaele/8078-2.jpg",
-      "assets/Kaele/8078-1.jpg",
+      "assets/kaele/8078-3.jpg",
+      "assets/kaele/8078-2.jpg",
+      "assets/kaele/8078-1.jpg",
     ],
     colors: [
       { name: "Azul", hex: "#7FA8D8" },
@@ -215,10 +215,10 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Diana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Listrada",
     images: [
-      "assets/Kaele/8144-4.jpg",
-      "assets/Kaele/8144-3.jpg",
-      "assets/Kaele/8144-2.jpg",
-      "assets/Kaele/8144-1.jpg",
+      "assets/kaele/8144-4.jpg",
+      "assets/kaele/8144-3.jpg",
+      "assets/kaele/8144-2.jpg",
+      "assets/kaele/8144-1.jpg",
     ],
     colors: [
       { name: "Vermelho", hex: "#C62828" },
@@ -241,7 +241,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Diana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Listrada",
     images: [
-      "assets/Kaele/8145-1.jpg",
+      "assets/kaele/8145-1.jpg",
     ],
     colors: [
       { name: "Vermelho", hex: "#C62828" },
@@ -264,7 +264,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/Kaele/8160-1.jpg",
+      "assets/kaele/8160-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -288,7 +288,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/Kaele/8161-1.jpg",
+      "assets/kaele/8161-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -312,8 +312,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Sophia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria de Viscose",
     images: [
-      "assets/Kaele/8093-2.jpg",
-      "assets/Kaele/8093-1.jpg",
+      "assets/kaele/8093-2.jpg",
+      "assets/kaele/8093-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -337,11 +337,11 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Macacão Lori do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Twill",
     images: [
-      "assets/Kaele/8159-5.jpg",
-      "assets/Kaele/8159-4.jpg",
-      "assets/Kaele/8159-3.jpg",
-      "assets/Kaele/8159-2.jpg",
-      "assets/Kaele/8159-1.jpg",
+      "assets/kaele/8159-5.jpg",
+      "assets/kaele/8159-4.jpg",
+      "assets/kaele/8159-3.jpg",
+      "assets/kaele/8159-2.jpg",
+      "assets/kaele/8159-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -365,8 +365,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Manu do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria",
     images: [
-      "assets/Kaele/8136-2.jpg",
-      "assets/Kaele/8136-1.jpg",
+      "assets/kaele/8136-2.jpg",
+      "assets/kaele/8136-1.jpg",
     ],
     colors: [
       { name: "Creme", hex: "#F7E9CF" },
@@ -390,7 +390,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Manu do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria",
     images: [
-      "assets/Kaele/8137-1.jpg",
+      "assets/kaele/8137-1.jpg",
     ],
     colors: [
       { name: "Creme", hex: "#F7E9CF" },
@@ -414,9 +414,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Colete Geórgia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Twill",
     images: [
-      "assets/Kaele/8146-3.jpg",
-      "assets/Kaele/8146-2.jpg",
-      "assets/Kaele/8146-1.jpg",
+      "assets/kaele/8146-3.jpg",
+      "assets/kaele/8146-2.jpg",
+      "assets/kaele/8146-1.jpg",
     ],
     colors: [
       { name: "Salmão", hex: "#F4A89A" },
@@ -440,7 +440,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Geórgia do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Alfaiataria Twill",
     images: [
-      "assets/Kaele/8147-1.jpg",
+      "assets/kaele/8147-1.jpg",
     ],
     colors: [
       { name: "Salmão", hex: "#F4A89A" },
@@ -464,9 +464,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8165-3.jpg",
-      "assets/Kaele/8165-2.jpg",
-      "assets/Kaele/8165-1.jpg",
+      "assets/kaele/8165-3.jpg",
+      "assets/kaele/8165-2.jpg",
+      "assets/kaele/8165-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -490,8 +490,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Saia Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8163-2.jpg",
-      "assets/Kaele/8163-1.jpg",
+      "assets/kaele/8163-2.jpg",
+      "assets/kaele/8163-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -515,9 +515,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Vestido Maira do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Cotelê",
     images: [
-      "assets/Kaele/8123-3.jpg",
-      "assets/Kaele/8123-2.jpg",
-      "assets/Kaele/8123-1.jpg",
+      "assets/kaele/8123-3.jpg",
+      "assets/kaele/8123-2.jpg",
+      "assets/kaele/8123-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -541,8 +541,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8164-2.jpg",
-      "assets/Kaele/8164-1.jpg",
+      "assets/kaele/8164-2.jpg",
+      "assets/kaele/8164-1.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -566,8 +566,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Amber do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8176-5.jpg",
-      "assets/Kaele/8176-4.jpg",
+      "assets/kaele/8176-5.jpg",
+      "assets/kaele/8176-4.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -590,8 +590,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Amber do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8176-3.jpg",
-      "assets/Kaele/8176-1.jpg",
+      "assets/kaele/8176-3.jpg",
+      "assets/kaele/8176-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -614,9 +614,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Capa Mirela do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/Kaele/8157-3.jpg",
-      "assets/Kaele/8157-2.jpg",
-      "assets/Kaele/8157-1.jpg",
+      "assets/kaele/8157-3.jpg",
+      "assets/kaele/8157-2.jpg",
+      "assets/kaele/8157-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -640,9 +640,9 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Mirela do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Viscose",
     images: [
-      "assets/Kaele/8158-3.jpg",
-      "assets/Kaele/8158-2.jpg",
-      "assets/Kaele/8158-1.jpg",
+      "assets/kaele/8158-3.jpg",
+      "assets/kaele/8158-2.jpg",
+      "assets/kaele/8158-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -666,7 +666,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Blusa Tati do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Texturizado",
     images: [
-      "assets/Kaele/8054-1.jpg",
+      "assets/kaele/8054-1.jpg",
     ],
     colors: [
       { name: "Amarelo", hex: "#F4D76B" },
@@ -690,7 +690,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Tati do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Texturizado",
     images: [
-      "assets/Kaele/8055-1.jpg",
+      "assets/kaele/8055-1.jpg",
     ],
     colors: [
       { name: "Amarelo", hex: "#F4D76B" },
@@ -714,7 +714,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Jess do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Canelada",
     images: [
-      "assets/Kaele/8098-1.jpg",
+      "assets/kaele/8098-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -739,8 +739,8 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Mariana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Risca de Giz",
     images: [
-      "assets/Kaele/8132-2.jpg",
-      "assets/Kaele/8132-1.jpg",
+      "assets/kaele/8132-2.jpg",
+      "assets/kaele/8132-1.jpg",
     ],
     colors: [
       { name: "Bege", hex: "#D9C8AD" },
@@ -763,7 +763,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Mariana do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Liocel Risca de Giz",
     images: [
-      "assets/Kaele/8133-1.jpg",
+      "assets/kaele/8133-1.jpg",
     ],
     colors: [
       { name: "Bege", hex: "#D9C8AD" },
@@ -786,7 +786,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Body Isa do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Renda",
     images: [
-      "assets/Kaele/8162-1.jpg",
+      "assets/kaele/8162-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -810,7 +810,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Tricot do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Tricot",
     images: [
-      "assets/Kaele/8505-1.jpg",
+      "assets/kaele/8505-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
@@ -834,7 +834,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Isabel do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Denim",
     images: [
-      "assets/Kaele/8508-1.jpg",
+      "assets/kaele/8508-1.jpg",
     ],
     colors: [
       { name: "Marinho", hex: "#0B1F3A" },
@@ -856,7 +856,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Regata Dupla Maira do catálogo Lucentia New Summer Collection 03 08.",
     composition: "Malha Cotelê",
     images: [
-      "assets/Kaele/8124-1.jpg",
+      "assets/kaele/8124-1.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },
