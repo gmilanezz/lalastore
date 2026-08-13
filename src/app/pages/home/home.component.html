@@ -74,77 +74,35 @@
   </section>
 
   <section class="info-section" id="catalogos">
-    <div class="accordion">
-      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'Cashier' }">
-        <button class="accordion-btn" type="button" (click)="toggleAccordion('Cashier')">
-          <span>Cashier</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-        <div class="accordion-content">
-          <p>
-          </p>
-        </div>
-      </div>
-      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'Esmeral' }">
-        <button class="accordion-btn" type="button" (click)="toggleAccordion('Esmeral')">
-          <span>Esmeral</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-        <div class="accordion-content">
-          <p>
-            <a routerLink="/catalogo/Esmeral/Summer Dream">A Summer Dream</a><br>
-            <a routerLink="/catalogo/Esmeral/A Summer with Nat Bars">A Summer with Nat Bars</a><br>
-          </p>
-        </div>
-      </div>
+  <div class="accordion">
+    <div
+      class="accordion-item"
+      *ngFor="let brand of brands; trackBy: trackByBrand"
+      [ngClass]="{ active: activeAccordion === brand.name }"
+    >
+      <button
+        class="accordion-btn"
+        type="button"
+        (click)="toggleAccordion(brand.name)"
+      >
+        <span>{{ brand.name }}</span>
 
-      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'kaele' }">
-        <button class="accordion-btn" type="button" (click)="toggleAccordion('kaele')">
-          <span>Kaele</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
 
-        <div class="accordion-content">
-          <p>
-            <a routerLink="/catalogo/Kaele/Lucentia II">Lucentia II</a><br>
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'mysk' }">
-        <button class="accordion-btn" type="button" (click)="toggleAccordion('mysk')">
-          <span>Mysk</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-
-        <div class="accordion-content">
-          <p>
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion-item" [ngClass]="{ active: activeAccordion === 'Rock Lola' }">
-        <button class="accordion-btn" type="button" (click)="toggleAccordion('Rock Lola')">
-          <span>Rock Lola</span>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-
-        <div class="accordion-content">
-          <p>
-            <a routerLink="/catalogo/Rock Lola/nomecatalogo"></a><br>
-          </p>
-        </div>
+      <div class="accordion-content">
+        <p>
+          <ng-container *ngFor="let catalog of brand.catalogs; trackBy: trackByCatalog">
+            <a [routerLink]="['/catalogo', brand.name, catalog]">
+              {{ catalog }}
+            </a>
+            <br>
+          </ng-container>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>

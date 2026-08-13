@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 import { ProductService } from './product.service';
 
 export interface CatalogItem {
@@ -33,19 +33,22 @@ export class CatalogService {
 
   readonly state$: Observable<CatalogState> = this.stateSubject.asObservable();
 
+  readonly catalogs$: Observable<CatalogItem[]> = this.stateSubject.pipe(
+    map(state => state.catalogs)
+  );
+
   constructor(private readonly productService: ProductService) {
-    // Mantém marcas e catálogos existentes nos produtos sincronizados com o menu.
-    this.productService.products$.subscribe((products) => {
+    this.productService.products$.subscribe(products => {
       const brands = products
-        .map((product) => product.brand?.trim())
+        .map(product => product.brand?.trim())
         .filter((brand): brand is string => Boolean(brand));
 
       const catalogs = products
-        .filter(
-          (product) =>
-            Boolean(product.brand?.trim()) && Boolean(product.catalog?.trim())
+        .filter(product =>
+          Boolean(product.brand?.trim()) &&
+          Boolean(product.catalog?.trim())
         )
-        .map((product) => ({
+        .map(product => ({
           brand: product.brand.trim(),
           catalog: product.catalog.trim()
         }));
@@ -197,11 +200,11 @@ export class CatalogService {
         : [];
       const catalogs = Array.isArray(parsed.catalogs)
         ? parsed.catalogs.filter(
-            (item): item is CatalogItem =>
-              Boolean(item) &&
-              typeof item.brand === 'string' &&
-              typeof item.catalog === 'string'
-          )
+          (item): item is CatalogItem =>
+            Boolean(item) &&
+            typeof item.brand === 'string' &&
+            typeof item.catalog === 'string'
+        )
         : [];
 
       return {

@@ -1,9 +1,16 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { CatalogItem, CatalogService } from '../../services/catalog.service';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
+
+interface HomeBrand {
+  name: string;
+  catalogs: string[];
+}
 
 @Component({
   selector: 'app-home',
@@ -18,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   featuredProducts: Product[] = [];
   activeSlide = 0;
   activeAccordion: string | null = null;
+  brands: HomeBrand[] = [];
 
   readonly slides = [
     {
@@ -53,28 +61,43 @@ export class HomeComponent implements OnInit, OnDestroy {
   readonly heroSlides = [...this.heroImages, ...this.heroImages];
 
   private intervalId: number | undefined;
+  private catalogSubscription?: Subscription;
 
-  constructor(private readonly productService: ProductService) { }
+  constructor(
+    private readonly productService: ProductService,
+    private readonly catalogService: CatalogService
+  ) {}
 
   ngOnInit(): void {
-    this.featuredProducts = this.productService
-      .getProducts()
-      .filter((product) =>
-        product.brand?.trim().toLowerCase() === 'esmeral' &&
-        product.catalog?.trim().toLowerCase() === 'a summer with nat bars' &&
-        product.isActive
-      )
-      .slice(0, 8);
+  this.featuredProducts = this.productService
+    .getProducts()
+    .filter(product =>
+      product.brand?.trim().toLowerCase() === 'esmeral' &&
+      product.catalog?.trim().toLowerCase() === 'a summer with nat bars' &&
+      product.isActive
+    )
+    .slice(0, 8);
 
-    console.log('Produtos A Summer with Nat Bars:', this.featuredProducts);
+  this.catalogSubscription = this.catalogService.catalogs$.subscribe((catalogs: CatalogItem[]) => {
+    this.brands = this.groupCatalogsByBrand(catalogs);
 
-    this.startCarousel();
-  }
+    if (
+      this.activeAccordion &&
+      !this.brands.some(brand => brand.name === this.activeAccordion)
+    ) {
+      this.activeAccordion = null;
+    }
+  });
+
+  this.startCarousel();
+}
 
   ngOnDestroy(): void {
     if (this.intervalId) {
       window.clearInterval(this.intervalId);
     }
+
+    this.catalogSubscription?.unsubscribe();
   }
 
   goToSlide(index: number): void {
@@ -108,6 +131,44 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   trackByHeroImage(index: number, image: string): string {
     return `${image}-${index}`;
+  }
+
+  trackByBrand(_: number, brand: HomeBrand): string {
+    return brand.name;
+  }
+
+  trackByCatalog(_: number, catalog: string): string {
+    return catalog;
+  }
+
+  private groupCatalogsByBrand(catalogs: CatalogItem[]): HomeBrand[] {
+    const brandsMap = new Map<string, Set<string>>();
+
+    catalogs.forEach(item => {
+      const brandName = item.brand.trim();
+      const catalogName = item.catalog.trim();
+
+      if (!brandName || !catalogName) {
+        return;
+      }
+
+      if (!brandsMap.has(brandName)) {
+        brandsMap.set(brandName, new Set<string>());
+      }
+
+      brandsMap.get(brandName)?.add(catalogName);
+    });
+
+    return Array.from(brandsMap.entries())
+      .map(([name, catalogsSet]) => ({
+        name,
+        catalogs: Array.from(catalogsSet).sort((a, b) =>
+          a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
+        )
+      }))
+      .sort((a, b) =>
+        a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' })
+      );
   }
 
   private startCarousel(): void {
