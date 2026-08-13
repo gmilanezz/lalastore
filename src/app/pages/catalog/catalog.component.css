@@ -53,11 +53,11 @@
 
 .filters input,
 .filters select {
-  border: 1px solid rgba(74, 3, 95, 0.18);
+  background: #fff;
+  border: 1px solid rgba(74, 3, 95, .18);
+  box-sizing: border-box;
   font: inherit;
-  padding: 0.6rem 1rem;
-  appearance: auto;
-  -webkit-appearance: auto;
+  padding: .8rem .9rem;
 }
 
 .filters button,
@@ -102,7 +102,7 @@
     grid-template-columns: 1fr;
   }
 
-  .filters button{
+  .filters button {
     margin-top: 5px;
   }
 
