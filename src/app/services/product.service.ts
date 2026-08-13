@@ -66,6 +66,21 @@ export class ProductService {
     this.saveProducts(updatedProducts);
   }
 
+  deleteProductsByCatalog(brand: string, catalog: string): void {
+    const normalizedBrand = this.normalize(brand);
+    const normalizedCatalog = this.normalize(catalog);
+
+    const updatedProducts = this.productsSubject.value.filter(
+      (product) =>
+        !(
+          this.normalize(product.brand) === normalizedBrand &&
+          this.normalize(product.catalog) === normalizedCatalog
+        )
+    );
+
+    this.saveProducts(updatedProducts);
+  }
+
   importProductsFromJson(rawJson: string): { success: boolean; message: string } {
     try {
       const parsed = JSON.parse(rawJson) as Product[] | { products: Product[] };

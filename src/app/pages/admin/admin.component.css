@@ -115,7 +115,7 @@ button {
   color: var(--text-light);
   cursor: pointer;
   font-weight: 600;
-  padding: 0.85rem 1.1rem;
+  padding: 1.1rem 0.9rem;
 }
 
 button.secondary {
@@ -209,7 +209,8 @@ button.danger {
 }
 
 .product-table-header {
-  align-items: end;
+  align-items: stretch;
+  flex-direction: column;
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
@@ -250,7 +251,7 @@ th {
   color: #1d6b34;
   display: inline-flex;
   font-size: 0.85rem;
-  font-weight: 900;
+  font-weight: 600;
   padding: 0.35rem 0.7rem;
 }
 
@@ -282,11 +283,6 @@ th {
 
   .catalog-create-button {
     width: 100%;
-  }
-
-  .product-table-header {
-    align-items: stretch;
-    flex-direction: column;
   }
 
   .product-search {

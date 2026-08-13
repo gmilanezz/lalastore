@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import {
+  CatalogService,
+  CatalogState
+} from '../../services/catalog.service';
 
 interface ProductForm {
   id?: number;
@@ -15,10 +20,6 @@ interface ProductForm {
   isActive: boolean;
 }
 
-interface StoredCatalogsByBrand {
-  [brand: string]: string[];
-}
-
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -26,13 +27,9 @@ interface StoredCatalogsByBrand {
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
-export class AdminComponent implements OnInit {
-  private readonly catalogsStorageKey = 'admin-catalogs-by-brand';
-  private readonly brandsStorageKey = 'admin-brands';
-
+export class AdminComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   brands: string[] = [];
-  catalogsByBrand: StoredCatalogsByBrand = {};
 
   newCatalogName = '';
   catalogBrand = '';
@@ -42,10 +39,30 @@ export class AdminComponent implements OnInit {
 
   form: ProductForm = this.createEmptyForm();
 
-  constructor(private readonly productService: ProductService) {}
+  private catalogState: CatalogState = {
+    brands: [],
+    catalogs: []
+  };
+
+  private catalogSubscription?: Subscription;
+
+  constructor(
+    private readonly productService: ProductService,
+    private readonly catalogService: CatalogService
+  ) {}
 
   ngOnInit(): void {
     this.refreshProducts();
+
+    this.catalogSubscription = this.catalogService.state$.subscribe((state) => {
+      this.catalogState = state;
+      this.brands = [...state.brands];
+      this.syncSelectedBrandsAndCatalogs();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.catalogSubscription?.unsubscribe();
   }
 
   get filteredProducts(): Product[] {
@@ -82,17 +99,16 @@ export class AdminComponent implements OnInit {
       this.productService.createProduct(product);
     }
 
-    this.ensureBrandExists(product.brand);
-    this.ensureCatalogExists(product.brand, product.catalog);
+    // Garante que qualquer marca/catálogo utilizado no produto também esteja
+    // disponível imediatamente no header e nos selects do Admin.
+    this.catalogService.addCatalog(product.brand, product.catalog);
+
     this.cancelEdit();
     this.refreshProducts();
   }
 
   editProduct(product: Product): void {
     this.isEditing = true;
-
-    this.ensureBrandExists(product.brand);
-    this.ensureCatalogExists(product.brand, product.catalog);
 
     this.form = {
       id: product.id,
@@ -138,25 +154,20 @@ export class AdminComponent implements OnInit {
       return;
     }
 
-    const brandCatalogs = this.getCatalogsForBrand(brand);
-    const alreadyExists = brandCatalogs.some(
-      (catalog) => this.normalize(catalog) === this.normalize(catalogName)
-    );
+    const created = this.catalogService.addCatalog(brand, catalogName);
 
-    if (alreadyExists) {
+    if (!created) {
       this.catalogMessage = 'Este catálogo já existe para a marca selecionada.';
       return;
     }
 
-    this.ensureBrandExists(brand);
-    this.ensureCatalogExists(brand, catalogName);
-
-    // Deixa o catálogo recém-criado pronto para o cadastro de produto.
+    // O service emite a atualização imediatamente. Já deixamos o catálogo
+    // recém-criado selecionado para cadastrar produtos sem recarregar a tela.
     this.form.brand = brand;
     this.form.catalog = catalogName;
-
     this.newCatalogName = '';
-    this.catalogMessage = 'Catálogo criado com sucesso e selecionado no cadastro de produto.';
+    this.catalogMessage =
+      'Catálogo criado com sucesso e selecionado no cadastro de produto.';
   }
 
   deleteCatalog(brand: string, catalog: string): void {
@@ -170,28 +181,13 @@ export class AdminComponent implements OnInit {
       ? `Deseja realmente excluir o catálogo "${catalog}" da marca "${brand}" e todos os ${productsFromCatalog.length} produto(s) vinculados a ele?`
       : `Deseja realmente excluir o catálogo "${catalog}" da marca "${brand}"?`;
 
-    const confirmDelete = window.confirm(message);
-
-    if (!confirmDelete) {
+    if (!window.confirm(message)) {
       return;
     }
 
-    // Exclusão em cascata: remove todos os produtos do catálogo.
-    productsFromCatalog.forEach((product) => {
-      this.productService.deleteProduct(product.id);
-    });
-
-    const brandKey = this.findBrandKey(brand) ?? brand;
-    const remainingCatalogs = (this.catalogsByBrand[brandKey] ?? []).filter(
-      (item) => this.normalize(item) !== this.normalize(catalog)
-    );
-
-    this.catalogsByBrand = {
-      ...this.catalogsByBrand,
-      [brandKey]: remainingCatalogs
-    };
-
-    this.persistCatalogs();
+    // Exclusão em cascata: catálogo e produtos vinculados são removidos de uma vez.
+    this.productService.deleteProductsByCatalog(brand, catalog);
+    this.catalogService.deleteCatalog(brand, catalog);
     this.refreshProducts();
 
     if (
@@ -210,9 +206,11 @@ export class AdminComponent implements OnInit {
   onProductBrandChange(): void {
     const catalogs = this.getCatalogsForBrand(this.form.brand);
 
-    if (!catalogs.some(
-      (catalog) => this.normalize(catalog) === this.normalize(this.form.catalog)
-    )) {
+    if (
+      !catalogs.some(
+        (catalog) => this.normalize(catalog) === this.normalize(this.form.catalog)
+      )
+    ) {
       this.form.catalog = catalogs[0] ?? '';
     }
   }
@@ -222,78 +220,29 @@ export class AdminComponent implements OnInit {
   }
 
   getCatalogsForBrand(brand: string): string[] {
-    if (!brand) {
-      return [];
-    }
+    const normalizedBrand = this.normalize(brand);
 
-    const brandKey = this.findBrandKey(brand);
-
-    if (!brandKey) {
-      return [];
-    }
-
-    return [...(this.catalogsByBrand[brandKey] ?? [])].sort((a, b) =>
-      a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
-    );
+    return this.catalogState.catalogs
+      .filter((item) => this.normalize(item.brand) === normalizedBrand)
+      .map((item) => item.catalog)
+      .sort((a, b) =>
+        a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
+      );
   }
 
   cancelEdit(): void {
     this.isEditing = false;
     this.form = this.createEmptyForm();
-
-    if (this.brands.length > 0) {
-      this.form.brand = this.brands[0];
-      this.onProductBrandChange();
-    }
+    this.syncSelectedBrandsAndCatalogs();
   }
 
   private refreshProducts(): void {
     this.products = this.productService.getProducts({
       onlyActive: false
     });
-
-    this.refreshBrandsAndCatalogs();
   }
 
-  private refreshBrandsAndCatalogs(): void {
-    const storedBrands = this.getStoredBrands();
-    const storedCatalogs = this.getStoredCatalogs();
-
-    const productBrands = this.products
-      .map((product) => product.brand?.trim())
-      .filter((brand): brand is string => Boolean(brand));
-
-    this.brands = this.uniqueSorted([...storedBrands, ...productBrands]);
-
-    const mergedCatalogs: StoredCatalogsByBrand = {};
-
-    this.brands.forEach((brand) => {
-      const storedBrandKey = Object.keys(storedCatalogs).find(
-        (key) => this.normalize(key) === this.normalize(brand)
-      );
-
-      const storedBrandCatalogs = storedBrandKey
-        ? storedCatalogs[storedBrandKey] ?? []
-        : [];
-
-      const productCatalogs = this.products
-        .filter(
-          (product) =>
-            this.normalize(product.brand) === this.normalize(brand)
-        )
-        .map((product) => product.catalog?.trim())
-        .filter((catalog): catalog is string => Boolean(catalog));
-
-      mergedCatalogs[brand] = this.uniqueSorted([
-        ...storedBrandCatalogs,
-        ...productCatalogs
-      ]);
-    });
-
-    this.catalogsByBrand = mergedCatalogs;
-    this.persistBrands();
-    this.persistCatalogs();
-
+  private syncSelectedBrandsAndCatalogs(): void {
     if (!this.catalogBrand || !this.hasBrand(this.catalogBrand)) {
       this.catalogBrand = this.brands[0] ?? '';
     }
@@ -303,52 +252,6 @@ export class AdminComponent implements OnInit {
     }
 
     this.onProductBrandChange();
-  }
-
-  private ensureBrandExists(brand: string): void {
-    const brandName = brand.trim();
-
-    if (!brandName || this.hasBrand(brandName)) {
-      return;
-    }
-
-    this.brands = this.uniqueSorted([...this.brands, brandName]);
-    this.catalogsByBrand = {
-      ...this.catalogsByBrand,
-      [brandName]: []
-    };
-
-    this.persistBrands();
-    this.persistCatalogs();
-  }
-
-  private ensureCatalogExists(brand: string, catalog: string): void {
-    const brandName = brand.trim();
-    const catalogName = catalog.trim();
-
-    if (!brandName || !catalogName) {
-      return;
-    }
-
-    this.ensureBrandExists(brandName);
-
-    const brandKey = this.findBrandKey(brandName) ?? brandName;
-    const currentCatalogs = this.catalogsByBrand[brandKey] ?? [];
-
-    if (
-      currentCatalogs.some(
-        (item) => this.normalize(item) === this.normalize(catalogName)
-      )
-    ) {
-      return;
-    }
-
-    this.catalogsByBrand = {
-      ...this.catalogsByBrand,
-      [brandKey]: this.uniqueSorted([...currentCatalogs, catalogName])
-    };
-
-    this.persistCatalogs();
   }
 
   private createEmptyForm(): ProductForm {
@@ -370,6 +273,8 @@ export class AdminComponent implements OnInit {
 
     const name = this.form.name.trim();
 
+    // Os campos abaixo continuam no Product porque outras páginas do site
+    // dependem deles, mas não são expostos no formulário administrativo.
     return {
       code: this.form.code.trim(),
       name,
@@ -401,102 +306,17 @@ export class AdminComponent implements OnInit {
       .replace(/^-+|-+$/g, '');
   }
 
-  private normalize(value: string): string {
-    return value
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .trim();
-  }
-
-  private uniqueSorted(values: string[]): string[] {
-    const map = new Map<string, string>();
-
-    values.forEach((value) => {
-      const trimmedValue = value.trim();
-      const normalizedValue = this.normalize(trimmedValue);
-
-      if (trimmedValue && !map.has(normalizedValue)) {
-        map.set(normalizedValue, trimmedValue);
-      }
-    });
-
-    return Array.from(map.values()).sort((a, b) =>
-      a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
-    );
-  }
-
   private hasBrand(brand: string): boolean {
     return this.brands.some(
       (item) => this.normalize(item) === this.normalize(brand)
     );
   }
 
-  private findBrandKey(brand: string): string | undefined {
-    return Object.keys(this.catalogsByBrand).find(
-      (key) => this.normalize(key) === this.normalize(brand)
-    );
-  }
-
-  private getStoredBrands(): string[] {
-    try {
-      const storedValue = localStorage.getItem(this.brandsStorageKey);
-
-      if (!storedValue) {
-        return [];
-      }
-
-      const parsedValue = JSON.parse(storedValue);
-
-      return Array.isArray(parsedValue)
-        ? parsedValue.filter((item): item is string => typeof item === 'string')
-        : [];
-    } catch {
-      return [];
-    }
-  }
-
-  private getStoredCatalogs(): StoredCatalogsByBrand {
-    try {
-      const storedValue = localStorage.getItem(this.catalogsStorageKey);
-
-      if (!storedValue) {
-        return {};
-      }
-
-      const parsedValue = JSON.parse(storedValue);
-
-      if (!parsedValue || typeof parsedValue !== 'object' || Array.isArray(parsedValue)) {
-        return {};
-      }
-
-      const validCatalogs: StoredCatalogsByBrand = {};
-
-      Object.entries(parsedValue).forEach(([brand, catalogs]) => {
-        if (Array.isArray(catalogs)) {
-          validCatalogs[brand] = catalogs.filter(
-            (item): item is string => typeof item === 'string'
-          );
-        }
-      });
-
-      return validCatalogs;
-    } catch {
-      return {};
-    }
-  }
-
-  private persistBrands(): void {
-    localStorage.setItem(
-      this.brandsStorageKey,
-      JSON.stringify(this.brands)
-    );
-  }
-
-  private persistCatalogs(): void {
-    localStorage.setItem(
-      this.catalogsStorageKey,
-      JSON.stringify(this.catalogsByBrand)
-    );
+  private normalize(value: string): string {
+    return value
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim();
   }
 }

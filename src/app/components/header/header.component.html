@@ -6,33 +6,18 @@
 
     <nav class="desktop-menu" aria-label="Menu principal">
       <ul>
-        <li class="dropdown">
-          <span>Cashier</span>
-          <ul class="dropdown-menu">
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span>Esmeral</span>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/Esmeral/Summer Dream" routerLinkActive="active-link">Summer Dream</a></li>
-            <li><a routerLink="/catalogo/Esmeral/A Summer with Nat Bars" routerLinkActive="active-link">A Summer with
-                Nat Bars</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span>Kaele</span>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/catalogo/Kaele/Lucentia II" routerLinkActive="active-link">Lucentia II</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span>Mysk</span>
-          <ul class="dropdown-menu">
-          </ul>
-        </li>
-        <li class="dropdown">
-          <span>Rock Lola</span>
-          <ul class="dropdown-menu">
+        <li class="dropdown" *ngFor="let brand of brands">
+          <span>{{ brand.name }}</span>
+
+          <ul class="dropdown-menu" *ngIf="brand.catalogs.length > 0">
+            <li *ngFor="let catalog of brand.catalogs">
+              <a
+                [routerLink]="['/catalogo', brand.name, catalog]"
+                routerLinkActive="active-link"
+              >
+                {{ catalog }}
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -67,46 +52,24 @@
   <nav class="mobile-menu" [ngClass]="{ active: isMobileMenuOpen }" aria-label="Menu mobile"
     (click)="$event.stopPropagation()">
     <ul class="menu-list">
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Cashier' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Cashier')">
-          Cashier
+      <li
+        class="menu-item has-submenu"
+        *ngFor="let brand of brands"
+        [ngClass]="{ active: openSubmenu === brand.name }"
+      >
+        <button class="menu-link" type="button" (click)="toggleSubmenu(brand.name)">
+          {{ brand.name }}
         </button>
-        <ul class="submenu">
-        </ul>
-      </li>
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Esmeral' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Esmeral')">
-          Esmeral
-        </button>
-        <ul class="submenu">
-          <li><a routerLink="/catalogo/Esmeral/Summer Dream" (click)="closeMobileMenu()">Summer Dream</a></li>
-          <li><a routerLink="/catalogo/Esmeral/A Summer with Nat Bars" (click)="closeMobileMenu()">A Summer with Nat
-              Bars</a></li>
-        </ul>
-      </li>
 
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Kaele' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Kaele')">
-          Kaele
-        </button>
-        <ul class="submenu">
-          <li><a routerLink="/catalogo/Kaele/Lucentia II" (click)="closeMobileMenu()">Lucentia II</a></li>
-        </ul>
-      </li>
-
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Mysk' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Mysk')">
-          Mysk
-        </button>
-        <ul class="submenu">
-        </ul>
-      </li>
-
-      <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Rock Lola' }">
-        <button class="menu-link" type="button" (click)="toggleSubmenu('Rock Lola')">
-          Rock Lola
-        </button>
-        <ul class="submenu">
+        <ul class="submenu" *ngIf="brand.catalogs.length > 0">
+          <li *ngFor="let catalog of brand.catalogs">
+            <a
+              [routerLink]="['/catalogo', brand.name, catalog]"
+              (click)="closeMobileMenu()"
+            >
+              {{ catalog }}
+            </a>
+          </li>
         </ul>
       </li>
 
@@ -116,25 +79,32 @@
         </button>
 
         <ul class="submenu">
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/sobre">Sobre a Lala Store</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/sobre">Sobre a Lala Store</a>
           </li>
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/perguntas">Perguntas Frequentes</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/perguntas">Perguntas Frequentes</a>
           </li>
         </ul>
       </li>
+
       <li class="menu-item has-submenu" [ngClass]="{ active: openSubmenu === 'Política' }">
         <button class="menu-link" type="button" (click)="toggleSubmenu('Política')">
           Política
         </button>
 
         <ul class="submenu">
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/frete">Entrega e Frete</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/frete">Entrega e Frete</a>
           </li>
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/pagamento">Pagamento</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/pagamento">Pagamento</a>
           </li>
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/troca-devolucao">Trocas e Devoluções</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/troca-devolucao">Trocas e Devoluções</a>
           </li>
-          <li> <a class="menu-link" (click)="closeMobileMenu()" routerLink="/termosuso">Termos de Uso</a>
+          <li>
+            <a class="menu-link" (click)="closeMobileMenu()" routerLink="/termosuso">Termos de Uso</a>
           </li>
         </ul>
       </li>
