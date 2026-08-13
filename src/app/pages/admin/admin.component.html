@@ -7,74 +7,6 @@
   </section>
 
   <section class="admin-grid">
-    <form class="product-form" (ngSubmit)="saveProduct()">
-      <h2>{{ isEditing ? 'Editar produto' : 'Cadastrar produto' }}</h2>
-
-      <div class="form-row two-columns">
-        <label>
-          Código
-          <input name="code" [(ngModel)]="form.code" required placeholder="JH62131">
-        </label>
-
-        <label>
-          Nome
-          <input name="name" [(ngModel)]="form.name" required placeholder="Vestido Floral">
-        </label>
-      </div>
-
-      <label>
-        Preço
-        <input name="price" type="number" min="0" step="0.01" [(ngModel)]="form.price" required>
-      </label>
-
-      <div class="form-row two-columns">
-        <label>
-          Marca
-          <select name="brand" [(ngModel)]="form.brand" (change)="onProductBrandChange()" required>
-            <option value="" disabled>Selecione uma marca</option>
-            <option *ngFor="let brand of brands" [value]="brand">
-              {{ brand }}
-            </option>
-          </select>
-        </label>
-
-        <label>
-          Catálogo
-          <select name="catalog" [(ngModel)]="form.catalog" required [disabled]="!form.brand">
-            <option value="" disabled>Selecione um catálogo</option>
-            <option *ngFor="let catalog of getCatalogsForBrand(form.brand)" [value]="catalog">
-              {{ catalog }}
-            </option>
-          </select>
-        </label>
-      </div>
-
-      <p class="empty-catalog-hint" *ngIf="form.brand && getCatalogsForBrand(form.brand).length === 0">
-        Esta marca ainda não possui catálogos. Crie um catálogo ao lado para começar a cadastrar produtos.
-      </p>
-
-      <div class="form-row two-columns">
-        <div class="stacked-fields">
-          <label>
-            Tamanhos
-            <input name="sizesText" [(ngModel)]="form.sizesText" placeholder="P, M, G">
-          </label>
-        </div>
-      </div>
-
-      <label class="checkbox-label">
-        <input type="checkbox" name="isActive" [(ngModel)]="form.isActive">
-        Produto ativo no catálogo
-      </label>
-
-      <div class="form-actions">
-        <button type="submit" [disabled]="!form.brand || !form.catalog">
-          {{ isEditing ? 'Salvar edição' : 'Cadastrar produto' }}
-        </button>
-        <button type="button" class="secondary" (click)="cancelEdit()" *ngIf="isEditing">Cancelar</button>
-      </div>
-    </form>
-
     <section class="catalog-manager">
       <h2>Gerenciar catálogos</h2>
       <p class="catalog-help">
@@ -94,12 +26,8 @@
 
         <label>
           Novo catálogo
-          <input
-            name="newCatalogName"
-            [(ngModel)]="newCatalogName"
-            placeholder="Ex.: Verão 2027"
-            (keyup.enter)="addCatalog()"
-          >
+          <input name="newCatalogName" [(ngModel)]="newCatalogName" placeholder="Ex.: Verão 2027"
+            (keyup.enter)="addCatalog()">
         </label>
 
         <button type="button" class="catalog-create-button" (click)="addCatalog()">
@@ -118,11 +46,7 @@
             <span>{{ catalogBrand }}</span>
           </div>
 
-          <button
-            type="button"
-            class="danger catalog-delete-button"
-            (click)="deleteCatalog(catalogBrand, catalog)"
-          >
+          <button type="button" class="danger catalog-delete-button" (click)="deleteCatalog(catalogBrand, catalog)">
             Excluir
           </button>
         </div>
@@ -133,6 +57,74 @@
       </div>
     </section>
   </section>
+  <form class="product-form" (ngSubmit)="saveProduct()">
+    <h2>{{ isEditing ? 'Editar produto' : 'Cadastrar produto' }}</h2>
+
+    <div class="form-row two-columns">
+      <label>
+        Código
+        <input name="code" [(ngModel)]="form.code" required placeholder="JH62131">
+      </label>
+
+      <label>
+        Nome
+        <input name="name" [(ngModel)]="form.name" required placeholder="Vestido Floral">
+      </label>
+    </div>
+
+    <label>
+      Preço
+      <input name="price" type="number" min="0" step="0.01" [(ngModel)]="form.price" required>
+    </label>
+
+    <div class="form-row two-columns">
+      <label>
+        Marca
+        <select name="brand" [(ngModel)]="form.brand" (change)="onProductBrandChange()" required>
+          <option value="" disabled>Selecione uma marca</option>
+          <option *ngFor="let brand of brands" [value]="brand">
+            {{ brand }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Catálogo
+        <select name="catalog" [(ngModel)]="form.catalog" required [disabled]="!form.brand">
+          <option value="" disabled>Selecione um catálogo</option>
+          <option *ngFor="let catalog of getCatalogsForBrand(form.brand)" [value]="catalog">
+            {{ catalog }}
+          </option>
+        </select>
+      </label>
+    </div>
+
+    <p class="empty-catalog-hint" *ngIf="form.brand && getCatalogsForBrand(form.brand).length === 0">
+      Esta marca ainda não possui catálogos. Crie um catálogo ao lado para começar a cadastrar produtos.
+    </p>
+
+    <div class="form-row two-columns">
+      <div class="stacked-fields">
+        <label>
+          Tamanhos
+          <input name="sizesText" [(ngModel)]="form.sizesText" placeholder="P, M, G">
+        </label>
+      </div>
+    </div>
+
+    <label class="checkbox-label">
+      <input type="checkbox" name="isActive" [(ngModel)]="form.isActive">
+      Produto ativo no catálogo
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="!form.brand || !form.catalog">
+        {{ isEditing ? 'Salvar edição' : 'Cadastrar produto' }}
+      </button>
+      <button type="button" class="secondary" (click)="cancelEdit()" *ngIf="isEditing">Cancelar</button>
+    </div>
+  </form>
+
 
   <section class="product-table-section">
     <div class="product-table-header">
@@ -140,12 +132,8 @@
 
       <label class="product-search">
         Buscar produto
-        <input
-          type="search"
-          name="productSearchTerm"
-          [(ngModel)]="productSearchTerm"
-          placeholder="Digite o nome do produto"
-        >
+        <input type="search" name="productSearchTerm" [(ngModel)]="productSearchTerm"
+          placeholder="Digite o nome do produto">
       </label>
     </div>
 
