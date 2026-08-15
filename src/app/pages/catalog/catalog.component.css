@@ -65,10 +65,12 @@
 .empty-state a {
   background: var(--primary-purple);
   border: 0;
+  border-radius: 6px;
   color: var(--text-light);
   cursor: pointer;
-  font-weight: 500;
-  padding: 0.8rem 1.1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 1rem .7rem;
   text-decoration: none;
   margin-top: 15px;
 }
