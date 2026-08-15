@@ -24,7 +24,7 @@
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
   margin-top: 6px;
   object-fit: contain;
   width: auto;
@@ -282,12 +282,6 @@
 
   .hamburger {
     display: flex;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    margin-left: 25px;
   }
 }
 
