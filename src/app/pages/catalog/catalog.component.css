@@ -58,6 +58,7 @@
   box-sizing: border-box;
   font: inherit;
   padding: .8rem .9rem;
+  border-radius: 12px;
 }
 
 .filters button,

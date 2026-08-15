@@ -2,12 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { Product } from '../../models/product.model';
+import { Product, ProductColor } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
-import {
-  CatalogService,
-  CatalogState
-} from '../../services/catalog.service';
+import { CatalogService, CatalogState } from '../../services/catalog.service';
 
 interface ProductForm {
   id?: number;
@@ -17,6 +14,8 @@ interface ProductForm {
   catalog: string;
   price: number;
   sizesText: string;
+  imageCount: number;
+  colorsText: string;
   isActive: boolean;
 }
 
@@ -30,20 +29,14 @@ interface ProductForm {
 export class AdminComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   brands: string[] = [];
-
   newCatalogName = '';
   catalogBrand = '';
   catalogMessage = '';
   productSearchTerm = '';
   isEditing = false;
-
   form: ProductForm = this.createEmptyForm();
 
-  private catalogState: CatalogState = {
-    brands: [],
-    catalogs: []
-  };
-
+  private catalogState: CatalogState = { brands: [], catalogs: [] };
   private catalogSubscription?: Subscription;
 
   constructor(
@@ -53,8 +46,7 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.refreshProducts();
-
-    this.catalogSubscription = this.catalogService.state$.subscribe((state) => {
+    this.catalogSubscription = this.catalogService.state$.subscribe((state: CatalogState) => {
       this.catalogState = state;
       this.brands = [...state.brands];
       this.syncSelectedBrandsAndCatalogs();
@@ -67,27 +59,30 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   get filteredProducts(): Product[] {
     const search = this.normalize(this.productSearchTerm);
+    if (!search) return this.products;
+    return this.products.filter((product) => this.normalize(product.name).includes(search));
+  }
 
-    if (!search) {
-      return this.products;
-    }
+  get generatedImagePaths(): string[] {
+    return this.createImagePaths(this.form.imageCount);
+  }
 
-    return this.products.filter((product) =>
-      this.normalize(product.name).includes(search)
-    );
+  get generatedSlug(): string {
+    return this.createSlug(this.form.name);
+  }
+
+  get generatedDescription(): string {
+    const name = this.form.name.trim();
+    const catalog = this.form.catalog.trim();
+    return name && catalog ? `${name} do catálogo ${catalog}.` : '';
   }
 
   saveProduct(): void {
     const product = this.mapFormToProduct();
 
     if (this.isEditing && this.form.id) {
-      const currentProduct = this.products.find(
-        (item) => item.id === this.form.id
-      );
-
-      if (!currentProduct) {
-        return;
-      }
+      const currentProduct = this.products.find((item) => item.id === this.form.id);
+      if (!currentProduct) return;
 
       this.productService.updateProduct({
         ...currentProduct,
@@ -99,17 +94,13 @@ export class AdminComponent implements OnInit, OnDestroy {
       this.productService.createProduct(product);
     }
 
-    // Garante que qualquer marca/catálogo utilizado no produto também esteja
-    // disponível imediatamente no header e nos selects do Admin.
     this.catalogService.addCatalog(product.brand, product.catalog);
-
     this.cancelEdit();
     this.refreshProducts();
   }
 
   editProduct(product: Product): void {
     this.isEditing = true;
-
     this.form = {
       id: product.id,
       code: product.code,
@@ -118,24 +109,15 @@ export class AdminComponent implements OnInit, OnDestroy {
       catalog: product.catalog,
       price: product.price,
       sizesText: product.sizes.join(', '),
+      imageCount: product.images.length || 1,
+      colorsText: product.colors.map((color) => color.name).join(', '),
       isActive: product.isActive
     };
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   deleteProduct(id: number): void {
-    const confirmDelete = window.confirm(
-      'Deseja realmente remover este produto?'
-    );
-
-    if (!confirmDelete) {
-      return;
-    }
-
+    if (!window.confirm('Deseja realmente remover este produto?')) return;
     this.productService.deleteProduct(id);
     this.refreshProducts();
   }
@@ -155,19 +137,15 @@ export class AdminComponent implements OnInit, OnDestroy {
     }
 
     const created = this.catalogService.addCatalog(brand, catalogName);
-
     if (!created) {
       this.catalogMessage = 'Este catálogo já existe para a marca selecionada.';
       return;
     }
 
-    // O service emite a atualização imediatamente. Já deixamos o catálogo
-    // recém-criado selecionado para cadastrar produtos sem recarregar a tela.
     this.form.brand = brand;
     this.form.catalog = catalogName;
     this.newCatalogName = '';
-    this.catalogMessage =
-      'Catálogo criado com sucesso e selecionado no cadastro de produto.';
+    this.catalogMessage = 'Catálogo criado com sucesso e selecionado no cadastro de produto.';
   }
 
   deleteCatalog(brand: string, catalog: string): void {
@@ -181,11 +159,8 @@ export class AdminComponent implements OnInit, OnDestroy {
       ? `Deseja realmente excluir o catálogo "${catalog}" da marca "${brand}" e todos os ${productsFromCatalog.length} produto(s) vinculados a ele?`
       : `Deseja realmente excluir o catálogo "${catalog}" da marca "${brand}"?`;
 
-    if (!window.confirm(message)) {
-      return;
-    }
+    if (!window.confirm(message)) return;
 
-    // Exclusão em cascata: catálogo e produtos vinculados são removidos de uma vez.
     this.productService.deleteProductsByCatalog(brand, catalog);
     this.catalogService.deleteCatalog(brand, catalog);
     this.refreshProducts();
@@ -205,12 +180,7 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   onProductBrandChange(): void {
     const catalogs = this.getCatalogsForBrand(this.form.brand);
-
-    if (
-      !catalogs.some(
-        (catalog) => this.normalize(catalog) === this.normalize(this.form.catalog)
-      )
-    ) {
+    if (!catalogs.some((catalog) => this.normalize(catalog) === this.normalize(this.form.catalog))) {
       this.form.catalog = catalogs[0] ?? '';
     }
   }
@@ -221,13 +191,10 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   getCatalogsForBrand(brand: string): string[] {
     const normalizedBrand = this.normalize(brand);
-
     return this.catalogState.catalogs
       .filter((item) => this.normalize(item.brand) === normalizedBrand)
       .map((item) => item.catalog)
-      .sort((a, b) =>
-        a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })
-      );
+      .sort((a, b) => a.localeCompare(b, 'pt-BR', { sensitivity: 'base' }));
   }
 
   cancelEdit(): void {
@@ -237,20 +204,16 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   private refreshProducts(): void {
-    this.products = this.productService.getProducts({
-      onlyActive: false
-    });
+    this.products = this.productService.getProducts({ onlyActive: false });
   }
 
   private syncSelectedBrandsAndCatalogs(): void {
     if (!this.catalogBrand || !this.hasBrand(this.catalogBrand)) {
       this.catalogBrand = this.brands[0] ?? '';
     }
-
     if (!this.form.brand || !this.hasBrand(this.form.brand)) {
       this.form.brand = this.brands[0] ?? '';
     }
-
     this.onProductBrandChange();
   }
 
@@ -262,6 +225,8 @@ export class AdminComponent implements OnInit, OnDestroy {
       catalog: '',
       price: 300,
       sizesText: 'P, M, G',
+      imageCount: 1,
+      colorsText: 'Única',
       isActive: true
     };
   }
@@ -272,25 +237,20 @@ export class AdminComponent implements OnInit, OnDestroy {
       : undefined;
 
     const name = this.form.name.trim();
+    const catalog = this.form.catalog.trim();
 
-    // Os campos abaixo continuam no Product porque outras páginas do site
-    // dependem deles, mas não são expostos no formulário administrativo.
     return {
       code: this.form.code.trim(),
       name,
-      slug: existingProduct?.slug ?? this.createSlug(name),
+      slug: this.createSlug(name),
       brand: this.form.brand.trim(),
-      catalog: this.form.catalog.trim(),
+      catalog,
       category: existingProduct?.category ?? '',
       price: Number(this.form.price),
-      description: existingProduct?.description ?? '',
+      description: `${name} do catálogo ${catalog}.`,
       composition: existingProduct?.composition ?? '',
-      images: existingProduct?.images?.length
-        ? existingProduct.images
-        : ['assets/index/desktop/teste1.jpg'],
-      colors: existingProduct?.colors?.length
-        ? existingProduct.colors
-        : [{ name: 'Única' }],
+      images: this.createImagePaths(this.form.imageCount),
+      colors: this.parseColors(this.form.colorsText),
       sizes: this.form.sizesText
         .split(',')
         .map((size) => size.trim())
@@ -300,6 +260,60 @@ export class AdminComponent implements OnInit, OnDestroy {
     };
   }
 
+  private createImagePaths(count: number): string[] {
+    const total = Math.max(1, Math.floor(Number(count) || 1));
+    const brandFolder = this.createPathSegment(this.form.brand);
+    const code = this.createFileCode(this.form.code);
+
+    if (!brandFolder || !code) return [];
+
+    return Array.from(
+      { length: total },
+      (_, index) => `assets/${brandFolder}/${code}-${index + 1}.jpg`
+    );
+  }
+
+  private parseColors(colorsText: string): ProductColor[] {
+    const names = colorsText
+      .split(',')
+      .map((color) => color.trim())
+      .filter(Boolean);
+
+    return (names.length ? names : ['Única']).map((name) => ({
+      name,
+      hex: this.colorNameToHex(name)
+    }));
+  }
+
+  private colorNameToHex(colorName: string): string {
+    const colors: Record<string, string> = {
+      'amarelo': '#F4D03F', 'amarelo claro': '#FFF3A6', 'amarelo pastel': '#F8E58C',
+      'azul': '#4A90E2', 'azul bebe': '#A7C7E7', 'azul marinho': '#1F3A5F', 'azul royal': '#4169E1',
+      'bege': '#D8C3A5', 'branco': '#FFFFFF', 'bordo': '#800020', 'caramelo': '#C68E5B',
+      'cinza': '#808080', 'coral': '#FF7F50', 'creme': '#FFFDD0', 'dourado': '#D4AF37',
+      'fucsia': '#FF00FF', 'laranja': '#F28C28', 'lilas': '#C8A2C8', 'marrom': '#6B3F2A',
+      'menta': '#BFEAD8', 'mostarda': '#D4A017', 'nude': '#D8B5A5', 'off': '#F8F3EA',
+      'off white': '#F8F3EA', 'preto': '#111111', 'rosa': '#F5B6C8', 'rosa bebe': '#F4C2C2',
+      'roxo': '#800080', 'terracota': '#C66B4E', 'verde': '#90B255', 'verde militar': '#556B2F',
+      'vermelho': '#C62828', 'vinho': '#722F37', 'unica': '#D9D9D9'
+    };
+
+    return colors[this.normalize(colorName)] ?? '#D9D9D9';
+  }
+
+  private createPathSegment(value: string): string {
+    return this.normalize(value)
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  private createFileCode(value: string): string {
+    return value
+      .trim()
+      .replace(/[^a-zA-Z0-9_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   private createSlug(value: string): string {
     return this.normalize(value)
       .replace(/[^a-z0-9]+/g, '-')
@@ -307,9 +321,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   private hasBrand(brand: string): boolean {
-    return this.brands.some(
-      (item) => this.normalize(item) === this.normalize(brand)
-    );
+    return this.brands.some((item) => this.normalize(item) === this.normalize(brand));
   }
 
   private normalize(value: string): string {
