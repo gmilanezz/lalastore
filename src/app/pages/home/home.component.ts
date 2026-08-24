@@ -49,13 +49,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   private readonly heroImages = [
-    'assets/kaele/8077-2.jpg',
-    'assets/kaele/8078-3.jpg',
-    'assets/kaele/8098-3.jpg',
-    'assets/kaele/8123-3.jpg',
-    'assets/kaele/8104-3.jpg',
-    'assets/kaele/8176-5.jpg',
-    'assets/kaele/8095-2.jpg'
+    'assets/kaele/mama-castilho/8115-1.jpg',
+    'assets/kaele/mama-castilho/8117-1.jpg',
+    'assets/kaele/mama-castilho/8134-1.jpg',
+    'assets/kaele/mama-castilho/8143-1.jpg',
+    'assets/kaele/mama-castilho/8189-1.jpg',
+    'assets/kaele/mama-castilho/8173-1.jpg',
+    'assets/kaele/mama-castilho/8211-1.jpg'
   ];
 
   readonly heroSlides = [...this.heroImages, ...this.heroImages];
