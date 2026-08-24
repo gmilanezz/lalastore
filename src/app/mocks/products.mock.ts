@@ -2930,8 +2930,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Boné The Hamptons do catálogo Mamá Castilho.",
     composition: "Sarja",
     images: [
-      "assets/kaele/mama-castilho/bone-the-hamptons-1.jpg",
-      "assets/kaele/mama-castilho/bone-the-hamptons-2.jpg",
+      "assets/kaele/mama-castilho/bone-the-hampton.jpg"
     ],
     colors: [
       { name: "Off/Rosa", hex: "#F8F3EA" },
