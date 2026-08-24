@@ -2803,7 +2803,6 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/kaele/mama-castilho/8116-1.jpg",
       "assets/kaele/mama-castilho/8116-2.jpg",
-      "assets/kaele/mama-castilho/8116-3.jpg",
     ],
     colors: [
       { name: "Off", hex: "#F8F3EA" },

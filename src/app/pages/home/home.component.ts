@@ -29,20 +29,20 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   readonly slides = [
     {
-      desktopImage: 'assets/index/desktop/img1.jpg',
-      mobileImage: 'assets/index/mobile/img1.jpg',
+      desktopImage: 'assets/kaele/mama-castilho/8116-1.jpg',
+      mobileImage: 'assets/kaele/mama-castilho/8116-1.jpg',
       alt: 'A Summer with Nat Bars',
       link: '/catalogo/esmeral/A Summer with Nat Bars'
     },
     {
-      desktopImage: 'assets/index/desktop/img2.jpg',
-      mobileImage: 'assets/index/mobile/img2.jpg',
+      desktopImage: 'assets/kaele/mama-castilho/8134-1.jpg',
+      mobileImage: 'assets/kaele/mama-castilho/8134-1.jpg',
       alt: 'A Summer with Nat Bars',
       link: '/catalogo/esmeral/A Summer with Nat Bars'
     },
     {
-      desktopImage: 'assets/index/desktop/img3.jpg',
-      mobileImage: 'assets/index/mobile/img3.jpg',
+      desktopImage: 'assets/kaele/mama-castilho/8202-1.jpg',
+      mobileImage: 'assets/kaele/mama-castilho/8202-1.jpg',
       alt: 'A Summer with Nat Bars',
       link: '/catalogo/esmeral/A Summer with Nat Bars'
     }

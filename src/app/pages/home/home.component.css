@@ -14,7 +14,7 @@
 
 .carousel-slide {
   background-image: var(--desktop-image);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 
