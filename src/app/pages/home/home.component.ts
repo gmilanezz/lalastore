@@ -72,8 +72,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   this.featuredProducts = this.productService
     .getProducts()
     .filter(product =>
-      product.brand?.trim().toLowerCase() === 'esmeral' &&
-      product.catalog?.trim().toLowerCase() === 'a summer with nat bars' &&
+      product.brand?.trim().toLowerCase() === 'kaele' &&
+      product.catalog?.trim().toLowerCase() === 'mamá castilho' &&
       product.isActive
     )
     .slice(0, 8);
