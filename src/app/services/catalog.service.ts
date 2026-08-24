@@ -21,7 +21,8 @@ const DEFAULT_STATE: CatalogState = {
   catalogs: [
     { brand: 'Esmeral', catalog: 'Summer Dream' },
     { brand: 'Esmeral', catalog: 'A Summer with Nat Bars' },
-    { brand: 'Kaele', catalog: 'Lucentia II' }
+    { brand: 'Kaele', catalog: 'Lucentia II' },
+    { brand: 'Kaele', catalog: 'Mamá Castilho' },
   ]
 };
 
@@ -131,9 +132,6 @@ export class CatalogService {
 
   private loadInitialState(): CatalogState {
     const storedState = this.readStoredState();
-
-    // Depois da primeira gravação, o storage é a fonte de verdade. Isso evita
-    // que um catálogo padrão excluído reapareça ao recarregar a aplicação.
     if (storedState) {
       return storedState;
     }
