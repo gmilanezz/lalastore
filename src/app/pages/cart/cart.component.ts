@@ -15,6 +15,8 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit, OnDestroy {
   items: CartItem[] = [];
+  firstPurchase: boolean | null = null;
+  pixPayment: boolean | null = null;
   private subscription?: Subscription;
 
   constructor(public readonly cartService: CartService,
@@ -47,6 +49,29 @@ export class CartComponent implements OnInit, OnDestroy {
   removeItem(index: number): void {
     this.cartService.removeItem(index);
   }
+
+  setFirstPurchase(value: boolean): void {
+    this.firstPurchase = value;
+
+    if (!value) {
+      this.pixPayment = null;
+    }
+  }
+
+  setPixPayment(value: boolean): void {
+    this.pixPayment = value;
+  }
+
+  get hasFirstPurchasePixDiscount(): boolean {
+    return this.firstPurchase === true && this.pixPayment === true;
+  }
+
+  get finalTotalPrice(): number {
+    return this.hasFirstPurchasePixDiscount
+      ? this.cartService.totalPrice * 0.95
+      : this.cartService.totalPrice;
+  }
+
   get checkoutWhatsappUrl(): string {
     const phoneNumber = '5511976234592';
 
@@ -61,7 +86,6 @@ export class CartComponent implements OnInit, OnDestroy {
           item.selectedSize ? `Tamanho: ${item.selectedSize}` : null,
           `Quantidade: ${item.quantity}`,
           `Valor unitário: ${this.formatCurrency(product.price)}`,
-          `Subtotal: ${this.formatCurrency(product.price * item.quantity)}`
         ]
           .filter(Boolean)
           .join('\n');
@@ -74,7 +98,8 @@ Olá! Gostaria de finalizar meu pedido:
 ${productsMessage}
 
 Itens: ${this.cartService.totalItems}
-Total: ${this.formatCurrency(this.cartService.totalPrice)}
+Subtotal: ${this.formatCurrency(this.cartService.totalPrice * this.cartService.totalItems)}
+${this.hasFirstPurchasePixDiscount ? '\nDesconto de 5% pela primeira compra e pagamento via PIX:\n' : ''}Total: ${this.formatCurrency(this.finalTotalPrice)}
   `.trim();
 
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
