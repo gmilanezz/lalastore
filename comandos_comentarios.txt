@@ -9,4 +9,4 @@ adiciona todos os produtos do catálogo em product.mock.ts
 C:\Users\ghmil\OneDrive\Documentos\lalastorevip\
 
 npm run build -- --configuration production --base-href /
-npx angular-cli-ghpages --dir=dist/lalastorevip/browser
+npx angular-cli-ghpages --dir=dist/lalastorevip/browser --cname=lalastorevip.com.br
