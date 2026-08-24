@@ -32,19 +32,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       desktopImage: 'assets/kaele/mama-castilho/8116-1.jpg',
       mobileImage: 'assets/kaele/mama-castilho/8116-1.jpg',
       alt: 'A Summer with Nat Bars',
-      link: '/catalogo/esmeral/A Summer with Nat Bars'
+      link: '/catalogo/kaele/Mamá Castilho'
     },
     {
       desktopImage: 'assets/kaele/mama-castilho/8134-1.jpg',
       mobileImage: 'assets/kaele/mama-castilho/8134-1.jpg',
       alt: 'A Summer with Nat Bars',
-      link: '/catalogo/esmeral/A Summer with Nat Bars'
+      link: '/catalogo/kaele/Mamá Castilho'
     },
     {
       desktopImage: 'assets/kaele/mama-castilho/8202-1.jpg',
       mobileImage: 'assets/kaele/mama-castilho/8202-1.jpg',
       alt: 'A Summer with Nat Bars',
-      link: '/catalogo/esmeral/A Summer with Nat Bars'
+      link: '/catalogo/kaele/Mamá Castilho'
     }
   ];
 
