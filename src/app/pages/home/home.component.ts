@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private readonly heroImages = [
     'assets/kaele/mama-castilho/8115-1.jpg',
-    'assets/kaele/mama-castilho/8117-1.jpg',
+    'assets/kaele/mama-castilho/8514-1.jpg',
     'assets/kaele/mama-castilho/8134-1.jpg',
     'assets/kaele/mama-castilho/8143-1.jpg',
     'assets/kaele/mama-castilho/8189-1.jpg',
