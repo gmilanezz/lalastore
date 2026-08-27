@@ -23,6 +23,8 @@ const DEFAULT_STATE: CatalogState = {
     { brand: 'Esmeral', catalog: 'A Summer with Nat Bars' },
     { brand: 'Kaele', catalog: 'Lucentia II' },
     { brand: 'Kaele', catalog: 'Mamá Castilho' },
+    { brand: 'Esmeral', catalog: 'Basic' },
+    { brand: 'Mysk', catalog: 'Summer 27' },
   ]
 };
 
