@@ -3702,6 +3702,7 @@ export const MOCK_PRODUCTS: Product[] = [
     composition: "Jacquard",
     images: [
       "assets/mysk/summer-27/11137-1.jpg",
+      "assets/mysk/summer-27/11137-2.jpg",
     ],
     colors: [
       { name: "Choco", hex: "#4A2C22" },
@@ -3893,6 +3894,8 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11145.jpg",
       "assets/mysk/summer-27/11145-1.jpg",
+      "assets/mysk/summer-27/11145-2.jpg",
+      "assets/mysk/summer-27/11145-3.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -3918,6 +3921,7 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11146.jpg",
       "assets/mysk/summer-27/11146-1.jpg",
+      "assets/mysk/summer-27/11146-2.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -3943,6 +3947,7 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11138.jpg",
       "assets/mysk/summer-27/11138-1.jpg",
+      "assets/mysk/summer-27/11138-2.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -3968,6 +3973,7 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11139.jpg",
       "assets/mysk/summer-27/11139-1.jpg",
+      "assets/mysk/summer-27/11139-2.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -4013,6 +4019,7 @@ export const MOCK_PRODUCTS: Product[] = [
     description: "Calça Jeans Cecília do catálogo Summer 27.",
     composition: "Jeans",
     images: [
+      "assets/mysk/summer-27/11531.jpg",
       "assets/mysk/summer-27/11531-1.jpg",
     ],
     colors: [
@@ -4037,6 +4044,8 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11115.jpg",
       "assets/mysk/summer-27/11115-1.jpg",
+      "assets/mysk/summer-27/11115-2.jpg",
+      "assets/mysk/summer-27/11115-3.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -4064,6 +4073,8 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11164.jpg",
       "assets/mysk/summer-27/11164-1.jpg",
+      "assets/mysk/summer-27/11164-2.jpg",
+      "assets/mysk/summer-27/11164-3.jpg",
     ],
     colors: [
       { name: "Preto", hex: "#111111" },
@@ -4219,6 +4230,8 @@ export const MOCK_PRODUCTS: Product[] = [
     images: [
       "assets/mysk/summer-27/11156.jpg",
       "assets/mysk/summer-27/11156-1.jpg",
+      "assets/mysk/summer-27/11156-2.jpg",
+      "assets/mysk/summer-27/11156-3.jpg",
     ],
     colors: [
       { name: "Rosa", hex: "#F5B6C8" },
