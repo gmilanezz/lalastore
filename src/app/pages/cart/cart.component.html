@@ -33,61 +33,32 @@
     </div>
 
     <div class="cart-summary-inline">
+      <div class="discount-options">
+        <label class="discount-label" for="discountCode">Possui um cupom de desconto?</label>
+
+        <div class="discount-input-group">
+          <input id="discountCode" class="discount-input" type="text" placeholder="Digite seu cupom"
+            [value]="discountCode" (input)="updateDiscountCode($event)" (keyup.enter)="verifyDiscountCode()"
+            autocomplete="off">
+
+          <button type="button" class="discount-button" (click)="verifyDiscountCode()">
+            Verificar
+          </button>
+        </div>
+
+        <p class="discount-success" *ngIf="discountChecked && discountValid">
+          Cupom aplicado! Você ganhou 5% de desconto.
+        </p>
+
+        <p class="discount-error" *ngIf="discountChecked && !discountValid">
+          Cupom inválido.
+        </p>
+      </div>
+        
       <p>
         Itens:
         {{ cartService.totalItems }}
       </p>
-
-      <div class="discount-options">
-        <fieldset class="discount-question">
-          <legend>É a sua primeira compra conosco?</legend>
-
-          <label>
-            <input
-              type="radio"
-              name="firstPurchase"
-              [checked]="firstPurchase === true"
-              (change)="setFirstPurchase(true)">
-            Sim
-          </label>
-
-          <label>
-            <input
-              type="radio"
-              name="firstPurchase"
-              [checked]="firstPurchase === false"
-              (change)="setFirstPurchase(false)">
-            Não
-          </label>
-        </fieldset>
-
-        <fieldset class="discount-question" *ngIf="firstPurchase === true">
-          <legend>A compra será realizada no PIX?</legend>
-
-          <label>
-            <input
-              type="radio"
-              name="pixPayment"
-              [checked]="pixPayment === true"
-              (change)="setPixPayment(true)">
-            Sim
-          </label>
-
-          <label>
-            <input
-              type="radio"
-              name="pixPayment"
-              [checked]="pixPayment === false"
-              (change)="setPixPayment(false)">
-            Não
-          </label>
-        </fieldset>
-
-        <p class="discount-success" *ngIf="hasFirstPurchasePixDiscount">
-          Parabéns! Você ganhou 5% de desconto na sua primeira compra pagando via PIX.
-        </p>
-      </div>
-
       <p class="cart-total">
         Total:
         {{ finalTotalPrice | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}

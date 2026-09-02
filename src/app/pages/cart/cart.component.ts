@@ -15,8 +15,10 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit, OnDestroy {
   items: CartItem[] = [];
-  firstPurchase: boolean | null = null;
-  pixPayment: boolean | null = null;
+  discountCode = '';
+  discountChecked = false;
+  discountValid = false;
+  private readonly validDiscountCode = 'PRIMEIRACOMPRA';
   private subscription?: Subscription;
 
   constructor(public readonly cartService: CartService,
@@ -50,24 +52,24 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartService.removeItem(index);
   }
 
-  setFirstPurchase(value: boolean): void {
-    this.firstPurchase = value;
-
-    if (!value) {
-      this.pixPayment = null;
-    }
+  updateDiscountCode(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.discountCode = input.value;
+    this.discountChecked = false;
+    this.discountValid = false;
   }
 
-  setPixPayment(value: boolean): void {
-    this.pixPayment = value;
+  verifyDiscountCode(): void {
+    this.discountChecked = true;
+    this.discountValid = this.discountCode.trim().toUpperCase() === this.validDiscountCode;
   }
 
-  get hasFirstPurchasePixDiscount(): boolean {
-    return this.firstPurchase === true && this.pixPayment === true;
+  get hasDiscount(): boolean {
+    return this.discountChecked && this.discountValid;
   }
 
   get finalTotalPrice(): number {
-    return this.hasFirstPurchasePixDiscount
+    return this.hasDiscount
       ? this.cartService.totalPrice * 0.95
       : this.cartService.totalPrice;
   }
@@ -99,7 +101,7 @@ ${productsMessage}
 
 Itens: ${this.cartService.totalItems}
 Subtotal: ${this.formatCurrency(this.cartService.totalPrice * this.cartService.totalItems)}
-${this.hasFirstPurchasePixDiscount ? '\nDesconto de 5% pela primeira compra e pagamento via PIX:\n' : ''}Total: ${this.formatCurrency(this.finalTotalPrice)}
+${this.hasDiscount ? `\nCupom ${this.validDiscountCode} aplicado: 5% de desconto.\n` : ''}Total: ${this.formatCurrency(this.finalTotalPrice)}
   `.trim();
 
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
